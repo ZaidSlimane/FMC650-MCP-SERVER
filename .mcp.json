@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "fmc650-comprehensive-mcp": {
+      "command": "python",
+      "args": [
+        "-m",
+        "fmc650_mcp_server.server"
+      ],
+      "cwd": ".",
+      "env": {
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  }
+}

@@ -1,0 +1,533 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.10.27 13:57:41 =~=~=~=~=~=~=~=~=~=~=~=
+[2026.10.27 13:56:02]-[T.RECMNG] SQ: 176083|Opt-Size:3376 cnt:211
+![2026.10.27 13:57:39]-[SD.API]-> New Job:10
+[EX.IDLE]-> Moving State Change After: 78
+[OverSpeeding]	->Speed is 0![2026.10.27 13:57:40]-[T.RECMNG] File.ID Now:1494528 Max:1494528 SEQ:1494528|1494567
+[2026.10.27 13:57:40]-[T.RECMNG] File containing newest record
+[2026.10.27 13:57:40]-[T.RECMNG] RecFind find file seq:1494783:1494528
+[OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 77
+[OverSpeeding]	->Speed is 0![2026.10.27 13:57:41]-RS RecordFill Lenght:840 Records:7 Packed db:0
+[OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 76
+[2026.10.27 13:57:42]-[FLASH]-> 2nd server is not ready.
+[2026.10.27 13:57:42]-[AVL.WRITE]->Record Saved:
+
+[2026.10.27 13:57:42]-[AVL] SOURCE: 0 Ts:1793109462091 Diff:27248 ms AvlIO:0 GenType:8
+ HDOP Actual:	0.4
+ Timestamp:	1793109462091 Priority:	0 Longitude:	43388166 Latitude:	363285800 Altitude:	318 Angle:		0 Sat:		37 Speed:		0
+
+
+ Event IO ID:	0
+
+	IO[194]: 1793109461	IO[ 48]: 0	IO[ 67]: 9463	IO[ 68]: 0	IO[181]: 6	IO[182]: 4	IO[ 66]: 15491	IO[ 71]: 3	IO[240]: 0	IO[199]: 0	IO[ 24]: 0	IO[ 21]: 5	IO[ 70]: 349	IO[ 76]: 0	IO[239]: 1	IO[236]: 770	IO[237]: -155	IO[238]: -1569	IO[10010]: 3	IO[449]: 23562875
+
+
+ Record Size:	120 Bytes (26,94,0)
+[2026.10.27 13:57:42]-[FLASH]-> Rec Len:120 p:202470a0 attr:0
+[2026.10.27 13:57:42]-[SD.API]-> New Job:2
+[2026.10.27 13:57:42]-[SD.API]-> Save to db:0
+[OverSpeeding]	->Speed is 0![2026.10.27 13:57:42]-[MODEM]-> modem user id: 1
+<<AT+CGACT?
+>>+CGACT: 1,1
+[2026.10.27 13:57:42]-[MODEM]-> GPRS status:1,1
+
+>>OK
+[2026.10.27 13:57:42]-[MODEM]-> Status: open resp:1,1
+ len:5
+<<at
+>>OK
+[2026.10.27 13:57:42]-[SOCKET]-> Connect to id:5, ip:ch0000000.flespi.gw port:20001
+
+<<AT+CIPSTATUS=5
+>>+CIPSTATUS:5,0,TCP,198.51.100.130,20001,CLOSED
+[2026.10.27 13:57:42]-[MODEM]-> Socket: 5, State: not active
+>>OK
+<<AT+CIPSTART=5,"TCP","ch0000000.flespi.gw",20001
+>>OK
+[OverSpeeding]	->Speed is 0!>>5,CONNECT OK
+[2026.10.27 13:57:42]-[SOCKET]-> domain_out: , sATSockets[user_socket_id].IP 0.0.0.0
+[2026.10.27 13:57:42]-[SOCKET]-> Connect Success Handler: Data_2nd, socket_id: 5
+[2026.10.27 13:57:42]-[SOCKET]-> HANDLES info:
+
+[2026.10.27 13:57:42]-[SOCKET]-> HANDLE 0 Data socket: 0, taken: 0
+[2026.10.27 13:57:42]-[SOCKET]-> HANDLE 1 Log2srv socket: 0, taken: 0
+[2026.10.27 13:57:42]-[SOCKET]-> HANDLE 2 NTP socket: 2, taken: 0
+[2026.10.27 13:57:42]-[SOCKET]-> HANDLE 3 TACHO socket: 0, taken: 0
+[2026.10.27 13:57:42]-[SOCKET]-> HANDLE 4 Fota socket: 4, taken: 0
+[2026.10.27 13:57:42]-[SOCKET]-> HANDLE 5 Data_2nd socket: 5, taken: 1
+[2026.10.27 13:57:42]-[SOCKET]-> HANDLE 6 Connect socket: 0, taken: 0
+[2026.10.27 13:57:42]-[APP.SND.D]-> State change: 1 from @646
+[EX.IDLE]-> Moving State Change After: 75
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![2026.10.27 13:57:43]-[APP.SND.TCP]-> Send IMEI to Server... srv:1
+SOC5.TX:[000f383634363336303635353234343033]
+<<at
+[EX.IDLE]-> Moving State Change After: 74
+>>OK
+>>>>>5,SEND OK
+<<AT+CIPACK=5
+>>+CIPACK:17,0,17
+>>OK
+[OverSpeeding]	->Speed is 0![2026.10.27 13:57:44]-[APP.SND.TCP]-> Releasing mutex after imei sent
+[2026.10.27 13:57:44]-[APP.SND.TCP]-> Waiting for Server Response...
+[2026.10.27 13:57:44]-[T.RECMNG] Rec saved seq:16ce27
+>>+CIPRXGET:5
+[2026.10.27 13:57:44]-[MODEM]-> RX HANDLE data pending state
+>>+CIPRXGET:2,5,1,0,198.51.100.30:20001
+[2026.10.27 13:57:44]-[MODEM]-> RX HANDLE data receive state
+SOC5.RX:[01]
+[2026.10.27 13:57:44]-[D.P.TCP]-> IMEI Acknowledge Received: 1
+>>OK
+[2026.10.27 13:57:44]-[APP.SND.D]-> State change: 6 from @733
+[2026.10.27 13:57:44]-[T.RECMNG] Offset:4590 attr:0
+[2026.10.27 13:57:44]-[T.RECMNG] SQ: 1494568|Opt-Size:640 cnt:40
+[2026.10.27 13:57:44]-[APP.SND.D]-> State change: 6 from @1407
+[2026.10.27 13:57:44]-[APP.SND.TCP]-> Packing Done. TCP/IP Packet Length:[855]
+SOC5.TX:[000000000000034b8e07000001a17da412900102960d0615a74d28013e000023000000470014000600300000470300f00000150500ef01271a03000a004324f70044000000b5000800b6000400424001001800000046015c00ec02ff00edff6000eef9e5000400c26ae0ad1200c700000000004c0000000001c1016789c200000000000001a17da6a1db0102960d0615a74d280000000000000000470014000600300000470300f00000150500ef01271a03000a004324fb0044000000b5000000b6000000423806001800000046015d00ec02fe00edff6800eef9e3000400c26ae0adb900c700000000004c0000000001c101678a6100000000000001a17da698050102960d0615a74d280000000000000000470014000600300000470200f00000150500ef01271a03000a004324f40044000000b5000600b6000300423719001800000046015d00ec02ff00edff6900eef9e3000400c26ae0adb700c700000000004c0000000001c101678a5e00000000000001a17da697190002960d0615a74d28013f000024000000000014000600300000470300f00000150500ef01271a03000a004324f20044000000b5000700b6000400423739001800000046015d00ec02ff00edff6900eef9e3000400c26ae0adb700c700000000004c0000000001c101678a5e00000000000001a17da4052a0002960d0615a74d28013e000023000000000014000600300000470300f00000150500ef01271a03000a004324ee0044000000b5000800b6000400423c8d001800000046015b00ec02ff00edff6900eef9df000400c26ae0ad0e00c700000000004c0000000001c1016789be00000000000001a17da6400e0102960d0615a74d280000000000000000470014000600300000470300f00000150500ef01271a03000a004324f80044000000b5000000b60000004238fb001800000046015c00ec02fe00edff5b00eef9e6000400c26ae0ada100c700000000004c0000000001c101678a4700000000000001a17da636740102960d0615a74d280000000000000000470014000600300000470200f00000150500ef01271a03000a004324f60044000000b5000600b6000300423c04001800000046015c00ec02f400edff5a00eef9dc000400c26ae0ad9e00c700000000004c0000000001c101678a4500000000070000d016]
+[OverSpeeding]	->Speed is 0!<<at
+>>OK
+>>>>>5,SEND OK
+<<AT+CIPACK=5
+>>+CIPACK:872,17,855
+>>OK
+[2026.10.27 13:57:44]-[SD.API]-> New Job:10
+[2026.10.27 13:57:44]-[SD.API]-> Quick load start from 1494559 Order:2
+[2026.10.27 13:57:44]-[APP.GPS]-> Speed: 0, AvgSpeed: 0, FitnessMode: OFF Timeout:0s
+[EX.IDLE]-> Moving State Change After: 73
+[OverSpeeding]	->Speed is 0!>>+CIPRXGET:5
+[2026.10.27 13:57:45]-[MODEM]-> RX HANDLE data pending state
+>>+CIPRXGET:2,5,4,0,198.51.100.30:20001
+[2026.10.27 13:57:45]-[MODEM]-> RX HANDLE data receive state
+SOC5.RX:[00000007]
+CODEC12 FSM DATA:[00000007]
+[2026.10.27 13:57:45]-[D.P.TCP]-> Number of Data Received: 7 soc:5
+>>OK
+[OverSpeeding]	->Speed is 0![2026.10.27 13:57:45]-RS RecordFill Lenght:840 Records:7 Packed db:0
+[2026.10.27 13:57:45]-[APP.SND.TCP]-> Waiting for Server Response...
+[2026.10.27 13:57:45]-[APP.SND.TCP]-> AVL Records deleted Successfully Server2
+[2026.10.27 13:57:45]-[APP.SND.D]-> State change: 6 from @1133
+[2026.10.27 13:57:45]-[APP.SND.TCP]-> Packing Done. TCP/IP Packet Length:[855]
+SOC5.TX:[000000000000034b8e07000001a17da5ad920002960d0615a74d28013e000023000000000014000600300000470300f00000150500ef01271a03000a004324f80044000000b5000800b6000400423816001800000046015b00ec02ff00edff6900eef9dc000400c26ae0ad7c00c700000000004c0000000001c101678a2500000000000001a17da401b00102960d0615a74d28013e000023000000470014000600300000470300f00000150500ef01271a03000a004324fb0044000000b5000800b60004004240ba001800000046015b00ec030000edff6800eef9e4000400c26ae0ad0e00c700000000004c0000000001c1016789be00000000000001a17da563f90002960d0615a74d28013e000023000000000014000600300000470300f00000150500ef01271a03000a004324f90044000000b5000800b6000400423e19001800000046015c00ec02ff00edff6900eef9e3000400c26ae0ad6900c700000000004c0000000001c101678a1200000000000001a17da4f48f0002960d0615a74d28013e000023000000000014000600300000470300f00000150500ef01271a03000a004325120044000000b5000800b6000400423801001800000046015b00ec02ff00edff6800eef9e4000400c26ae0ad4c00c700000000004c0000000001c1016789f700000000000001a17da392ac0002960d0615a74d28013f000022000000000014000600300000470300f00000150500ef01271a03000a004324fc0044000000b5000800b6000400423ed3001800000046015b00ec030000edff6400eef9e4000400c26ae0acf000c700000000004c0000000001c1016789a200000000000001a17da470160002960d0615a74d28013e000023000000000014000600300000470300f00000150500ef01271a03000a004324fe0044000000b5000800b6000400423bd3001800000046015900ec02fb00edff5a00eef9e0000400c26ae0ad2a00c700000000004c0000000001c1016789d800000000000001a17da320e90002960d0615a74d28013f000024000000000014000600300000470300f00000150500ef01271a03000a0043250c0044000000b5000700b6000400423f8a001800000046015b00ec02f700edff6c00eef9e7000400c26ae0acd500c700000000004c0000000001c10167898700000000070000d500]
+[2026.10.27 13:57:45]-[APP.SND.D]-> 1 Time until data sending 160
+[2026.10.27 13:57:45]-[APP.SND.D]-> 2 Time until data sending 30
+[2026.10.27 13:57:45]-[WD.FUNC]-> counter:2 Cnt:175 Limit:930
+[2026.10.27 13:57:45]-[WD.FUNC]-> counter:3 Cnt:1 Limit:930
+[2026.10.27 13:57:45]-[FMS.ED]-> FMSED not running - no odometer data
+[2026.10.27 13:57:45]-[SD.API]-> New Job:11
+[OverSpeeding]	->Speed is 0!<<at
+[EX.IDLE]-> Moving State Change After: 72
+>>OK
+>>>>>5,SEND OK
+<<AT+CIPACK=5
+[2026.10.27 13:57:46]-[SD.API]-> Deleted 7 Records Mark:2
+>>+CIPACK:1727,872,855
+>>OK
+[2026.10.27 13:57:46]-[SD.API]-> New Job:10
+[2026.10.27 13:57:46]-[SD.API]-> Quick load start from 1494551 Order:2
+[OverSpeeding]	->Speed is 0!FotaWeb: 5 min passed since last check limit:40
+[EX.IDLE]-> Moving State Change After: 71
+<<at
+[OverSpeeding]	->Speed is 0!>>+CIPRXGET:5
+[2026.10.27 13:57:46]-[MODEM]-> RX HANDLE data pending state
+>>OK
+<<at
+>>OK
+<<AT
+>>OK
+<<AT+CREG?
+>>+CREG: 2,1,"520e","06427304",7
+>>OK
+<<AT+CEREG?
+>>+CEREG: 2,1,"520e","06427304",7
+>>OK
+<<AT+CGREG?
+>>+CGREG: 2,1,"520E","0642"
+>>OK
+<<AT+CCED=0,1
+>>+CCED:LTE current cell:603,02,603023692310454,0,1,n75,525,6427304,37,10,21006,24,261
+>>OK
+<<AT+CSQ
+>>+CSQ: 21,99
+[2026.10.27 13:57:47]-[MODEM]-> Signal rssi 21
+>>OK
+<<AT+QCSQ
+[2026.10.27 13:57:47]-[SD.API]-> New Job:1
+[2026.10.27 13:57:47]-[SD.API]-> Starting SD card initialization.
+[2026.10.27 13:57:47]-RS RecordFill Lenght:840 Records:7 Packed db:0
+>>+QCSQ: "LTE",-71,-104,41,-15
+>>OK
+[2026.10.27 13:57:47]-[APP.SND.TCP]-> Waiting for Server Response...
+<<SD.Init->1
+AT+QNWINFO
+SD.Init->End
+Card TYPE:0
+[2026.10.27 13:57:47]-[SD.API]-> SD card mount not OK. FATRES: 3
+>>+QNWINFO: "FDD LTE","60302","LTE BAND 1",525
+[2026.10.27 13:57:47]-[MODEM]-> Access Technology:FDD LTE
+[2026.10.27 13:57:47]-[MODEM]-> Operator:60302
+[2026.10.27 13:57:47]-[MODEM]-> Band:LTE BAND 1
+[2026.10.27 13:57:47]-[MODEM]-> Channel:525
+>>OK
+<<AT+COPS?
+[OverSpeeding]	->Speed is 0!>>+COPS: 0,2,"60302",7
+[2026.10.27 13:57:47]-[MODEM]-> GSM Op:60302 Net:7
+>>OK
+<<AT+CPAS
+>>+CPAS: 0
+>>OK
+<<AT+CPIN?
+>>+CPIN: READY
+>>OK
+<<AT+CIMI
+>>603023692310454
+>>OK
+<<AT+CSCA?
+>>+CSCA: "+10000000003",145
+>>OK
+<<AT+QLTS=1
+>>+QLTS: "2026/10/27,13:57:47+04,0"
+>>OK
+[2026.10.27 13:57:47]-[GSM.STATUS]-> 2 Registration Mode: (2/7) (603027/60302)
+[MODEM.STATUS]	Modem Power    : 1(1,0,0,1)	Modem State    : 0	Data Link      : 0	GPRS Status    : 1/549sec	Phone Status   : 0	SIM PIN        : 0	PIN Attemts    : 3	GSM Operator   : 60302(7)	OP in Blac list: 0	Bat. Charge    : 0	GSM Signal     : 5	Service        : 0	New Message    : 0	Roaming        : 0	SMS Full       : 0	Voice Call     : 0	Cell ID        : 105018116	LTE Cell ID    : 6427304	Area Code      : 21006	MCC            : 603	MNC            : 2	Network Type   : 2	CSQ Level   : 21	QCSQ (rssi) : -71 dBm	QCSQ (rsrp) : -104 dBm	QCSQ (sinr) : -11.8 dB	QCSQ (rsrq) : -15 dB	NoSIM/BadCnt    : 0	SIM:0 SingleSIM: 0[2026.10.27 13:57:47]-[GSM.STATUS]-> Prev Operator:60302 res:1 reconnect:0
+[2026.10.27 13:57:47]-[OP.SR] MOD_M2M_OPSEARCH_LISTNOTEMPTY 60301:0
+<<AT+CMGL=4
+>>OK
+>>+CIPRXGET:2,5,4,0,198.51.100.30:20001
+[2026.10.27 13:57:47]-[MODEM]-> RX HANDLE data receive state
+SOC5.RX:[00000007]
+CODEC12 FSM DATA:[00000007]
+[2026.10.27 13:57:47]-[D.P.TCP]-> Number of Data Received: 7 soc:5
+>>OK
+[2026.10.27 13:57:47]-[APP.SND.TCP]-> AVL Records deleted Successfully Server2
+[2026.10.27 13:57:47]-[APP.SND.D]-> State change: 6 from @1133
+[2026.10.27 13:57:47]-[APP.SND.TCP]-> Packing Done. TCP/IP Packet Length:[855]
+SOC5.TX:[000000000000034b8e07000001a17da2b3920002960d0615a74d28013f000024000000000014000600300000470300f00000150500ef01271a03000a004325020044000000b5000700b6000400423be2001800000046015d00ec030000edff6300eef9de000400c26ae0acb500c700000000004c0000000001c10167896c00000000000001a17da1d4090002960d0615a74d28013f000022000000000014000600300000470300f00000150500ef01271a03000a004325060044000000b5000800b6000400424083001800000046015d00ec02ff00edff6a00eef9e2000400c26ae0ac7f00c700000000004c0000000001c10167893c00000000000001a17da0e4220002960d0615a74d280140000025000000000014000600300000470300f00000150500ef01271a03000a0043250e0044000000b5000700b60004004240da001800000046015d00ec030600edff6a00eef9eb000400c26ae0ac4200c700000000004c0000000001c10167890600000000000001a17da052e90102960d0615a74d28013e000025000000470014000600300000470300f00000150500ef01271a03000a0043250c0044000000b5000600b6000400423d31001800000046015a00ec02fa00edff5b00eef9df000400c26ae0ac1c00c700000000004c0000000001c1016788e700000000000001a17da052e30102960d0615a74d28013e000025000000470014000600300000470300f00000150500ef01271a03000a0043250c0044000000b5000600b6000400423d31001800000046015a00ec02fa00edff5b00eef9df000400c26ae0ac1c00c700000000004c0000000001c1016788e700000000000001a17da0166b0002960d0615a74d28013c014a24000000000014000600300000470300f00000150500ef01271a03000a0043250e0044000000b5000700b6000400424217001800000046015b00ec02f700edff5c00eef9df000400c26ae0ac0d00c700000000004c0000000001c1016788e700000000000001a17d9f7c890002960d0615a74d28013c014a24000000000014000600300000470300f00000150500ef01271a03000a0043250a0044000000b5000700b6000400423ff0001800000046015c00ec02fd00edff6700eef9e1000400c26ae0abe600c700000000004c0000000001c1016788c4000000000700000148]
+[OverSpeeding]	->Speed is 0![2026.10.27 13:57:47]-[SD.API]-> New Job:11
+<<at
+[EX.IDLE]-> Moving State Change After: 70
+>>OK
+>>>>>5,SEND OK
+<<AT+CIPACK=5
+[2026.10.27 13:57:48]-[SD.API]-> Deleted 7 Records Mark:2
+>>+CIPACK:2582,1727,855
+>>OK
+[2026.10.27 13:57:48]-[SD.API]-> New Job:10
+[2026.10.27 13:57:48]-[SD.API]-> Quick load start from 1494543 Order:2
+[OverSpeeding]	->Speed is 0!>>+CIPRXGET:5
+[2026.10.27 13:57:48]-[MODEM]-> RX HANDLE data pending state
+>>+CIPRXGET:2,5,4,0,198.51.100.30:20001
+[2026.10.27 13:57:48]-[MODEM]-> RX HANDLE data receive state
+SOC5.RX:[00000007]
+CODEC12 FSM DATA:[00000007]
+[2026.10.27 13:57:48]-[D.P.TCP]-> Number of Data Received: 7 soc:5
+>>OK
+[OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 69
+[OverSpeeding]	->Speed is 0![2026.10.27 13:57:49]-RS RecordFill Lenght:891 Records:8 Packed db:0
+[2026.10.27 13:57:49]-[APP.SND.TCP]-> Waiting for Server Response...
+[2026.10.27 13:57:49]-[APP.SND.TCP]-> AVL Records deleted Successfully Server2
+[2026.10.27 13:57:49]-[APP.SND.D]-> State change: 6 from @1133
+[2026.10.27 13:57:49]-[APP.SND.TCP]-> Packing Done. TCP/IP Packet Length:[906]
+SOC5.TX:[000000000000037e8e08000001a17d9ef8f70002960d0615a74d28013c014a24000000000014000600300000470300f00000150500ef01271a03000a004325280044000000b5000700b6000400424113001800000046015b00ec02ff00edff6400eef9e5000400c26ae0abc200c700000000004c0000000001c1016788a500000000000001a17d9e596d0002960d0615a74d28013c014a24000000000014000600300000470300f00000150500ef01271a03000a004329530044002400b5000700b6000400424227001800000046015800ec030200edff6300eef9e2000400c26ae0ab9b00c700000000004c0000000001c10167888100000000000001a17d9e17670002960d0615a74d28013c014a24000000000014000600300000470300f00000150500ef01271a03000a004329500044002400b5000700b6000400423d4e001800000046015a00ec02fd00edff5f00eef9e4000400c26ae0ab8a00c700000000004c0000000001c10167887d00000000000001a17d9dbc7f0002960d0615a74d28013c014a24000000000014000600300000470300f00000150500ef01271a03000a004329520044002400b5000700b60004004238b1001800000046015a00ec030000edff6900eef9e1000400c26ae0ab7200c700000000004c0000000001c10167887d00000000000001a17d9cf4e40102960d0615a74d06013c013b24000000470012000500470300f00000150000ef01271a03000a004325030044000000b5000100b6000100424169001800000046015400ec02f900edff6800eef9db000300c700000000004c0000000001c10167885600000000000001a17d9cf4b20102960d0615a74d06013c013b24000000f90011000500470200f00000150000ef01271a03000a004325010044000000b5000000b6000000424186001800000046015400ec02f600edff6a00eef9e8000200c700000000004c0000000000000000000001a17d9cf2510002960e7515a74e430000000400000000ef0011000500470200f00000150000ef01271a03000a004325010044000000b5000000b6000000424186001800000046015400ec02f600edff6a00eef9e8000200c700000000004c0000000000000000000001a17d9cec4f0102960e7515a74e43000000000000000047000d000400470200f00000150000ef000007004324fe0044000000b5000000b60000004242930018000000460155000200c700000000004c000000000000000008000064de]
+<<at
+>>OK
+[2026.10.27 13:57:49]-[SD.API]-> New Job:11
+>>>>>5,SEND OK
+<<AT+CIPACK=5
+[2026.10.27 13:57:49]-[SD.API]-> Deleted 7 Records Mark:2
+>>+CIPACK:3488,2582,906
+>>OK
+[2026.10.27 13:57:49]-[SD.API]-> New Job:10
+[2026.10.27 13:57:49]-[SD.API]-> Quick load start from 1494534 Order:2
+[OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 68
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 67
+[2026.10.27 13:57:50]-RS RecordFill Lenght:909 Records:8 Packed db:0
+[2026.10.27 13:57:50]-[APP.SND.TCP]-> Waiting for Server Response...
+>>+CIPRXGET:5
+[2026.10.27 13:57:50]-[MODEM]-> RX HANDLE data pending state
+>>+CIPRXGET:2,5,4,0,198.51.100.30:20001
+[2026.10.27 13:57:50]-[MODEM]-> RX HANDLE data receive state
+SOC5.RX:[00000008]
+CODEC12 FSM DATA:[00000008]
+[2026.10.27 13:57:50]-[D.P.TCP]-> Number of Data Received: 8 soc:5
+>>OK
+[2026.10.27 13:57:51]-[APP.SND.TCP]-> AVL Records deleted Successfully Server2
+[2026.10.27 13:57:51]-[APP.SND.D]-> State change: 6 from @1133
+[2026.10.27 13:57:51]-[APP.SND.TCP]-> Packing Done. TCP/IP Packet Length:[924]
+SOC5.TX:[00000000000003908e08000001a17d9600220002960e7515a74e43013e00ad22000000ef0014000600300000470300f00000150500ef01271a03000a004329550044002400b5000800b6000400423fcf001800000046015200ec02f700edff6b00eef9e5000400c26ae0a97800c700000000004c0000000001c1016786e300000000000001a17d95ee710002960e7515a74e43013e00ad22000000000013000600300000470300f00000150500ef00271a03000a0043294e0044002400b5000800b6000400423d45001800000046015300ec02fc00edff6800eef9df000300c26ae0a97400c700000000004c0000000000000000000001a17d9579380002960e7515a74e43013d00ad22000000000014000600300000470300f00000150500ef00271a03000a0043295a0044002400b5000800b6000400423b69001800000046015300ec030000edff6a00eef9e4000400c26ae0a95600c700000000004c0000000001c1016786e100000000000001a17d9576a40002960e7515a74e43013d00ad22000000ef0014000600300000470300f00000150500ef00271a03000a0043295c0044002400b5000800b6000400423cb8001800000046015400ec02f400edff6700eef9ef000400c26ae0a95500c700000000004c0000000001c1016786e100000000000001a17d9515b70102960e4315a74e64013d000022000000f90014000600300000470300f00000150000ef01271a03000a004329530044002400b5000800b6000400423d91001800000046015100ec02fd00edff6800eef9df000400c26ae0a93c00c700000000004c0000000001c1016786ce00000000000001a17d94feb10102960e4315a74e64013d010122000000470011000500470300f00000150000ef01271a03000a004325060044000000b5000200b6000100423e85001800000046015200ec02ff00edff6a00eef9e5000200c700000000004c0000000000000000000001a17d94f8aa0102960d7b15a74e32000000000000000047000d000400470200f00000150000ef010007004325060044000000b5000000b60000004240330018000000460153000200c700000000004c0000000000000000000001a17d9151d50002960d7b15a74e32013d000022000000000014000600300000470300f00000150500ef01271a03000a004325030044000000b5000700b6000400423f77001800000046015500ec02f500edff6800eef9da000400c26ae0a84200c700000000004c0000000001c10167860d00000000080000cfb3]
+[2026.10.27 13:57:51]-[SD.API]-> New Job:11
+<<at
+[OverSpeeding]	->Speed is 0!>>OK
+>>>[2026.10.27 13:57:51]-[SD.API]-> Deleted 8 Records Mark:2
+>>5,SEND OK
+<<AT+CIPACK=5
+>>+CIPACK:4412,3488,924
+>>OK
+[2026.10.27 13:57:51]-[SD.API]-> New Job:10
+[2026.10.27 13:57:51]-[SD.API]-> Quick load start from 1494526 Order:2
+[OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 66
+[OverSpeeding]	->Speed is 0![2026.10.27 13:57:52]-RS RecordFill Lenght:948 Records:8 Packed db:0
+[2026.10.27 13:57:52]-[APP.SND.TCP]-> Waiting for Server Response...
+[OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 65
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![2026.10.27 13:57:53]-[REC.GARB]-> GC is scheduled after: 1531 sec
+[EX.IDLE]-> Moving State Change After: 64
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0!<<[NRF]AT
+[OverSpeeding]	->Speed is 0![TACHO]  DDD Available: 1, Timers [3600:3600][21:300]
+[2026.10.27 13:57:54]-[APP.GPS]-> Speed: 0, AvgSpeed: 0, FitnessMode: OFF Timeout:0s
+[EX.IDLE]-> Moving State Change After: 63
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![2026.10.27 13:57:55]-[APP.SND.D]-> 1 Time until data sending 150
+[2026.10.27 13:57:55]-[APP.SND.D]-> 2 Time until data sending 26
+[2026.10.27 13:57:55]-[WD.FUNC]-> counter:2 Cnt:185 Limit:930
+[2026.10.27 13:57:55]-[WD.FUNC]-> counter:3 Cnt:5 Limit:930
+[2026.10.27 13:57:55]-[FMS.ED]-> FMSED not running - no odometer data
+[EX.IDLE]-> Moving State Change After: 62
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![2026.10.27 13:57:56]-[T]->State ->Stop. S:0km/h, Ign:ON.
+[EX.IDLE]-> Moving State Change After: 61
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 60
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 59
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 58
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 57
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 56
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 55
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 54
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![2026.10.27 13:58:04]-[APP.GPS]-> Speed: 0, AvgSpeed: 0, FitnessMode: OFF Timeout:0s
+[EX.IDLE]-> Moving State Change After: 53
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![2026.10.27 13:58:05]-[APP.SND.D]-> 1 Time until data sending 140
+[2026.10.27 13:58:05]-[APP.SND.D]-> 2 Time until data sending 16
+[2026.10.27 13:58:05]-[WD.FUNC]-> counter:2 Cnt:195 Limit:930
+[2026.10.27 13:58:05]-[WD.FUNC]-> counter:3 Cnt:15 Limit:930
+[2026.10.27 13:58:05]-[SCH]->  PMinC:12 Ign:1 GPS st:1 Point:2.352200,48.856600 speed:0 date: 2026/10/27 13:58:5 Freq:1000
+[2026.10.27 13:58:05]-[IGN.CNT]-> Current 0 value -> 23562898
+
+[2026.10.27 13:58:05]-[FMS.ED]-> FMSED not running - no odometer data
+[OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 52
+[2026.10.27 13:58:06]-[SD.API]-> New Job:14
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 51
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 50
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 49
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0!<<[NRF]AT
+[EX.IDLE]-> Moving State Change After: 48
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 47
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 46
+[2026.10.27 13:58:12]-[AVL.WRITE]->Record Saved:
+
+[2026.10.27 13:58:12]-[AVL] SOURCE: 0 Ts:1793109492094 Diff:30003 ms AvlIO:0 GenType:8
+ HDOP Actual:	0.4
+ Timestamp:	1793109492094 Priority:	0 Longitude:	43388166 Latitude:	363285800 Altitude:	316 Angle:		0 Sat:		37 Speed:		0
+
+
+ Event IO ID:	0
+
+	IO[194]: 1793109491	IO[ 48]: 0	IO[ 67]: 9461	IO[ 68]: 0	IO[181]: 7	IO[182]: 4	IO[ 66]: 15060	IO[ 71]: 3	IO[240]: 0	IO[199]: 0	IO[ 24]: 0	IO[ 21]: 5	IO[ 70]: 349	IO[ 76]: 0	IO[239]: 1	IO[236]: 760	IO[237]: -155	IO[238]: -1573	IO[10010]: 3	IO[449]: 23562905
+
+
+ Record Size:	120 Bytes (26,94,0)
+[2026.10.27 13:58:12]-[LIVE.REC]-> Rec to RAM Srv:1 OK
+[2026.10.27 13:58:12]-[FLASH]-> Rec Len:120 p:202471a0 attr:2
+[2026.10.27 13:58:12]-[SD.API]-> New Job:2
+[2026.10.27 13:58:12]-[SD.API]-> Save to db:0
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 45
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 44
+[2026.10.27 13:58:14]-[T.RECMNG] Rec saved seq:16ce28
+[2026.10.27 13:58:14]-[T.RECMNG] Offset:4710 attr:0
+[OverSpeeding]	->Speed is 0![2026.10.27 13:58:14]-[T.RECMNG] SQ: 1494569|Opt-Size:656 cnt:41
+[OverSpeeding]	->Speed is 0![TACHO]  DDD Available: 1, Timers [3600:3600][41:300]
+[2026.10.27 13:58:14]-[APP.GPS]-> Speed: 0, AvgSpeed: 0, FitnessMode: OFF Timeout:0s
+[EX.IDLE]-> Moving State Change After: 43
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![PERIODIC.GPS.INFO]:
+
+ Module:	 GPS Power State:	1 Owner:0 GNSS status:	3
+Sat:	37 Lat:	48.856600 Long:	2.352200 Alt:	316 Speed:	0 Angle:0
+ GPS Timeout:1879777512 Fix:900 Nmea:1 Ap:1 Sync:1 baudrate: 1 valid packets: 115200[2026.10.27 13:58:15]-[APP.SND.D]-> 1 Time until data sending 130
+[2026.10.27 13:58:15]-[APP.SND.D]-> 2 Time until data sending 6
+[2026.10.27 13:58:15]-[WD.FUNC]-> counter:2 Cnt:205 Limit:930
+[2026.10.27 13:58:15]-[WD.FUNC]-> counter:3 Cnt:25 Limit:930
+[2026.10.27 13:58:15]-[FMS.ED]-> FMSED not running - no odometer data
+[EX.IDLE]-> Moving State Change After: 42
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 41
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 40
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 39
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 38
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 37
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 36
+[OverSpeeding]	->Speed is 0![2026.10.27 13:58:22]-[APP.SND.TCP]-> Response Got
+[2026.10.27 13:58:22]-[APP.SND.D]-> Server Response TMO
+[2026.10.27 13:58:22]-[APP.SND.D]-> State change: 10 from @1076
+[2026.10.27 13:58:22]-[APP.SND.D]-> State change: 0 from @1250
+[2026.10.27 13:58:22]-[SOCKET]-> AT_SocketClose:5 Type:0, Caller:2
+
+<<AT+CIPSTATUS=5
+>>+CIPSTATUS:5,0,TCP,198.51.100.30,20001,CONNECT OK
+[2026.10.27 13:58:22]-[MODEM]-> Socket: 5, State: active
+>>OK
+[2026.10.27 13:58:22]-[SOCKET]-> 5 is opened. Closing.[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 26
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 25
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 24
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![TACHO]  DDD Available: 1, Timers [3600:3600][61:300]
+[2026.10.27 13:58:34]-[APP.GPS]-> Speed: 0, AvgSpeed: 0, FitnessMode: OFF Timeout:0s
+[EX.IDLE]-> Moving State Change After: 23
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![PERIODIC.TASK_STACK.INFO]:AppSave:644CAN1:756CAN2:732Dsleep:1620EventQ:1724WDG:612Uart:1204Modem.Rx:1484AxlDProc:716AxlReader:140Scheduler:1624HBeat:332Oper:812TcpCmd:1648SmsE:1324TachoSend:3072TachoMain:2048SDLog:2692FlashJob:1876Modem Data:1332Trace Task:1084UNK:0UPD task:2252SiD Gen:2804Sid Tim:1788BTLE.API:1452UNK:0LVCAN.API:900TDM.APP:548OneWire:732MCAN:724GPS.T:356UNK:0[PERIODIC.UART_HEALTH.INFO]:UART 0 - [6/12366][7/341]
+
+UART 1 - [4/30]
+
+UART 2 - 
+
+UART 3 - [0/53][1/24][4/6]
+
+UART 4 - 
+
+UART 5 - 
+
+UART 6 - 
+
+UART 7 - 
+
+UART 8 - [3/6]
+
+[2026.10.27 13:58:35]-MTX Invalid:0,0,0,0
+[2026.10.27 13:58:36]-[FLASH]-> Flash Info:
+		Chip capacity:16777216/16384/16 (B/kB/MB)		Used space: 13807616/13484/13 (B/kB/MB)		Free space: 2969600/2900/2 (B/kB/MB)
+[2026.10.27 13:58:36]-[APP.SND.D]-> 1 Time until data sending 109
+[2026.10.27 13:58:36]-[APP.SND.D]-> 2 Time until data sending 46
+[2026.10.27 13:58:36]-[WD.FUNC]-> counter:2 Cnt:225 Limit:930
+[2026.10.27 13:58:36]-[WD.FUNC]-> counter:3 Cnt:45 Limit:930
+[2026.10.27 13:58:36]-[FMS.ED]-> FMSED not running - no odometer data
+[EX.IDLE]-> Moving State Change After: 22
+[OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 21
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![2026.10.27 13:58:37]-[TDM]-> Manufacturer:
+[2026.10.27 13:58:37]-[TDM]-> TxCnt:200 RxCnt:0 Tmo:0 FailesTx:1 Src:0
+[2026.10.27 13:58:37]-[TDM]-> Kline: Good_CS:0 Bad_CS:0
+[2026.10.27 13:58:37]-[TDM]-> LiveIO Addr:163
+[EX.IDLE]-> Moving State Change After: 20
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 19
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0!<<[NRF]AT
+[EX.IDLE]-> Moving State Change After: 18
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 17
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 16
+[2026.10.27 13:58:42]-[FLASH]-> 2nd server is not ready.
+[2026.10.27 13:58:42]-[AVL.WRITE]->Record Saved:
+
+[2026.10.27 13:58:42]-[AVL] SOURCE: 0 Ts:1793109522096 Diff:30002 ms AvlIO:0 GenType:8
+ HDOP Actual:	0.4
+ Timestamp:	1793109522096 Priority:	0 Longitude:	43388166 Latitude:	363285800 Altitude:	316 Angle:		0 Sat:		35 Speed:		0
+
+
+ Event IO ID:	0
+
+	IO[194]: 1793109521	IO[ 48]: 0	IO[ 67]: 9464	IO[ 68]: 0	IO[181]: 8	IO[182]: 4	IO[ 66]: 16008	IO[ 71]: 3	IO[240]: 0	IO[199]: 0	IO[ 24]: 0	IO[ 21]: 5	IO[ 70]: 351	IO[ 76]: 0	IO[239]: 1	IO[236]: 767	IO[237]: -151	IO[238]: -1565	IO[10010]: 3	IO[449]: 23562935
+
+
+ Record Size:	120 Bytes (26,94,0)
+[2026.10.27 13:58:42]-[FLASH]-> Rec Len:120 p:202470a0 attr:0
+[2026.10.27 13:58:42]-IGN Ignition changed:1->0 (128) Ext:16276(12000,14700)
+[Odometer]->FSM Reset
+[2026.10.27 13:58:42]-IGN Ignition changed:0->1 (2) Ext:16276(12000,14700)
+[2026.10.27 13:58:42]-IGN Ignition changed:1->0 (128) Ext:16226(12000,14700)
+[Odometer]->FSM Reset
+[2026.10.27 13:58:42]-IGN Ignition changed:0->1 (2) Ext:16226(12000,14700)
+[2026.10.27 13:58:42]-IGN Ignition changed:1->0 (128) Ext:16251(12000,14700)
+[OverSpeeding]	->Ign is OFF!	->Speed is 0![Odometer]->FSM Reset
+[2026.10.27 13:58:42]-IGN Ignition changed:0->1 (2) Ext:16099(12000,14700)
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:58:42]-[T.RECMNG] Rec saved seq:2aff9
+[2026.10.27 13:58:42]-[T.RECMNG] Offset:996 attr:7006
+[2026.10.27 13:58:43]-[T.RECMNG] SQ: 176122|Opt-Size:4000 cnt:250
+[2026.10.27 13:58:43]-IGN Ignition changed:1->0 (128) Ext:15860(12000,14700)
+[Odometer]->FSM Reset
+[2026.10.27 13:58:43]-IGN Ignition changed:0->1 (2) Ext:15872(12000,14700)
+[OverSpeeding]	->Speed is 0![TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:58:43]-[T.RECMNG] Rec saved seq:2affa
+[2026.10.27 13:58:43]-[T.RECMNG] Offset:1000 attr:7006
+[2026.10.27 13:58:43]-[SD.API]-> New Job:2
+[2026.10.27 13:58:43]-[SD.API]-> Save to db:0
+[2026.10.27 13:58:44]-[T.RECMNG] SQ: 176123|Opt-Size:4016 cnt:251
+[OverSpeeding]	->Speed is 0![MODEM.STATUS]	Modem Power    : 1(1,0,0,1)	Modem State    : 0	Data Link      : 0	GPRS Status    : 1/607sec	Phone Status   : 0	SIM PIN        : 0	PIN Attemts    : 3	GSM Operator   : 60302(7)	OP in Blac list: 0	Bat. Charge    : 0	GSM Signal     : 5	Service        : 0	New Message    : 0	Roaming        : 0	SMS Full       : 0	Voice Call     : 0	Cell ID        : 105018116	LTE Cell ID    : 6427304	Area Code      : 21006	MCC            : 603	MNC            : 2	Network Type   : 2	CSQ Level   : 21	QCSQ (rssi) : -71 dBm	QCSQ (rsrp) : -104 dBm	QCSQ (sinr) : -11.8 dB	QCSQ (rsrq) : -15 dB	NoSIM/BadCnt    : 0	SIM:0 SingleSIM: 0[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:58:45]-[APP.SND.D]-> 1 Time until data sending 100
+[2026.10.27 13:58:45]-[APP.SND.D]-> 2 Time until data sending 37
+[2026.10.27 13:58:45]-[WD.FUNC]-> counter:2 Cnt:235 Limit:930
+[2026.10.27 13:58:45]-[WD.FUNC]-> counter:3 Cnt:55 Limit:930
+[2026.10.27 13:58:45]-[FMS.ED]-> FMSED not running - no odometer data
+[OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 15
+[EX.IDLE]-> Moving State Change After: 14
+[2026.10.27 13:58:46]-[T.RECMNG] Rec saved seq:16ce2a
+[2026.10.27 13:58:46]-[T.RECMNG] Offset:4950 attr:0
+[2026.10.27 13:58:46]-[T.RECMNG] Rec saved seq:2affb
+[OverSpeeding]	->Speed is 0![2026.10.27 13:58:46]-[T.RECMNG] Offset:1004 attr:7006
+[2026.10.27 13:58:46]-[T.RECMNG] SQ: 1494571|Opt-Size:688 cnt:43
+[2026.10.27 13:58:46]-[T.RECMNG] SQ: 176124|Opt-Size:4032 cnt:252
+FotaWeb: 6 min passed since last check limit:40
+[OverSpeeding]	->Speed is 0![2026.10.27 13:58:47]-[T.RECMNG] Rec saved seq:2affc
+[2026.10.27 13:58:47]-[T.RECMNG] Offset:1008 attr:7006
+[2026.10.27 13:58:47]-[T.RECMNG] SQ: 176125|Opt-Size:4048 cnt:253
+[2026.10.27 13:58:47]-[SD.API]-> New Job:1
+[2026.10.27 13:58:47]-[SD.API]-> Starting SD card initialization.
+[2026.10.27 13:58:47]-[APP.GPS]-> Speed: 0, AvgSpeed: 0, FitnessMode: OFF Timeout:0s
+[EX.IDLE]-> Moving State Change After: 13
+SD.Init->1
+SD.Init->End
+Card TYPE:0
+[2026.10.27 13:58:47]-[SD.API]-> SD card mount not OK. FATRES: 3
+[EX.IDLE]-> Moving State Change After: 12
+<<at
+[OverSpeeding]	->Speed is 0!>>OK
+<<at
+>>OK
+<<AT
+>>OK
+<<AT+CREG?
+>>+CREG: 2,1,"520e","06427304",7
+>>OK
+<<AT+CEREG?
+>>+CEREG: 2,1,"520e","06427304",7
+>>OK
+<<AT+CGREG?
+>>+CGREG: 2,1,"520E","0642"
+>>OK
+<<AT+CCED=0,1
+>>+CCED:LTE current cell:603,02,603023692310454,0,1,n75,525,6427304,37,12,21006,24,261
+>>OK
+<<AT+CSQ
+>>+CSQ: 20,99
+[2026.10.27 13:58:48]-[MODEM]-> Signal rssi 20
+>>OK
+<<AT+QCSQ
+>>+QCSQ: "LTE",-72,-104,42,-15
+>>OK
+<<AT+QNWINFO
+>>+QNWINFO: "FDD LTE","60302","LTE BAND 1",525
+[2026.10.27 13:58:48]-[MODEM]-> Access Technology:FDD LTE
+[2026.10.27 13:58:48]-[MODEM]-> Operator:60302
+[2026.10.27 13:58:48]-[MODEM]-> Band:LTE BAND 1
+[2026.10.27 13:58:48]-[MODEM]-> Channel:525
+>>OK
+<<AT+COPS?
+[OverSpeeding]	->Speed is 0!>>+COPS: 0,2,"60302",7
+[2026.10.27 13:58:48]-[MODEM]-> GSM Op:60302 Net:7
+>>OK
+<<AT+CPAS
+>>+CPAS: 0
+>>OK
+<<AT+CPIN?
+>>+CPIN: READY
+>>OK
+<<AT+CIMI
+>>603023692310454
+>>OK
+<<AT+CSCA?
+>>+CSCA: "+10000000003",145
+>>OK
+<<AT+QLTS=1
+>>+QLTS: "2026/10/27,13:58:48+04,0"
+>>OK
+[2026.10.27 13:58:48]-[GSM.STATUS]-> 2 Registration Mode: (2/7) (603027/60302)
+[MODEM.STATUS]	Modem Power    : 1(1,0,0,1)	Modem State    : 0	Data Link      : 0	GPRS Status    : 1/610sec	Phone Status   : 0	SIM PIN        : 0	PIN Attemts    : 3	GSM Operator   : 60302(7)	OP in Blac list: 0	Bat. Charge    : 0	GSM Signal     : 5	Service        : 0	New Message    : 0	Roaming        : 0	SMS Full       : 0	Voice Call     : 0	Cell ID        : 105018116	LTE Cell ID    : 6427304	Area Code      : 21006	MCC            : 603	MNC            : 2	Network Type   : 2	CSQ Level   : 20	QCSQ (rssi) : -72 dBm	QCSQ (rsrp) : -104 dBm	QCSQ (sinr) : -11.6 dB	QCSQ (rsrq) : -15 dB	NoSIM/BadCnt    : 0	SIM:0 SingleSIM: 0[2026.10.27 13:58:48]-[GSM.STATUS]-> Prev Operator:60302 res:1 reconnect:0
+[2026.10.27 13:58:48]-[OP.SR] MOD_M2M_OPSEARCH_LISTNOTEMPTY 60301:0
+<<AT+CMGL=4
+>>OK
+[OverSpeeding]	->Speed is 0![EX.IDLE]-> Moving State Change After: 11
+[2026.10.27 13:58:48]-[SD.API]-> New Job:14
+[OverSpeeding]	->Speed is 0![OverSpeeding]	->Speed is 0![2026.10.27 13:58:49]-IGN Ignition changed:1->0 (128) Ext:15178(12000,14700)
+[Odometer]->FSM Reset
+[2026.10.27 13:58:49]-IGN Ignition changed:0->1 (2) Ext:15304(12000,14700)
+[2026.10.27 13:58:49]-IGN Ignition changed:1->0 (128) Ext:15178(12000,14700)
+[Odometer]->FSM Reset
+[2026.10.27 13:58:50]-IGN Ignition changed:0->1 (2) Ext:15241(12000,14700)
+[2026.10.27 13:58:50]-[T.RECMNG] Rec saved seq:2affd
+[2

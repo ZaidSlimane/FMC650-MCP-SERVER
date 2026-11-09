@@ -1,0 +1,19 @@
+{
+ "cfg_params": 11688,
+ "schema_ids": 13966,
+ "cfg_covered": 11688,
+ "cfg_unknown": 0,
+ "schema_only": 2278,
+ "coverage_pct": 100.0,
+ "ambiguous_ids": 1255,
+ "generator_definitions": 1173,
+ "ioitem_definitions": 6451,
+ "by_source": {
+  "generator:FMC650:1": 1149,
+  "xml:ParameterId": 126,
+  "xml:ListConfiguration": 1281,
+  "generator:IOItem": 6451,
+  "xml:Geozones": 1100,
+  "xml:Polygon": 1581
+ }
+}

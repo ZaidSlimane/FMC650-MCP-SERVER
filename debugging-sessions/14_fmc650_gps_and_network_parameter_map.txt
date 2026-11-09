@@ -1,0 +1,68 @@
+FMC650 GPS/GNSS & Network Parameter Mapping
+================================================================================
+
+PID 106    | Collection   | Label: Static Navigation              | Type:            | Collection: DisEn                | Default: 1          | Min:           Max:           Units:
+PID 108    | Placeholder  | Label: LED Indication                 | Type:            | Collection: DisEn                | Default: 1          | Min:           Max:           Units:
+PID 109    | Collection   | Label: LED Indication                 | Type:            | Collection: DisEn                | Default: 1          | Min:           Max:           Units:
+PID 112    | Collection   | Label: Static Navigation              | Type:            | Collection: DisEn                | Default: 1          | Min:           Max:           Units:
+PID 191    | Item         | Label: GNSS Data                      | Type:            | Collection: DisEn                | Default: 0          | Min:           Max:           Units:
+PID 192    | Item         | Label: GNSS Data                      | Type:            | Collection: DisEn                | Default: 0          | Min:           Max:           Units:
+PID 2000   | GroupBox     | Label: Gprs context                   | Type: String     | Collection: DisEn                | Default: 1          | Min:           Max:           Units:
+PID 2001   | Collection   | Label: Gprs context                   | Type: String     | Collection: DisEn                | Default: 1          | Min:           Max:           Units:
+PID 2002   | TextBox      | Label: Apn                            | Type: String     | Collection:                      | Default:            | Min:           Max:           Units:
+PID 2003   | TextBox      | Label: Apn username                   | Type: String     | Collection:                      | Default:            | Min:           Max:           Units:
+PID 2004   | Item         | Label: Domain                         | Type: String     | Collection:                      | Default:            | Min:0          Max:65535      Units:
+PID 2005   | TextBoxDomain | Label: Domain                         | Type: String     | Collection: ServProtocol         | Default: 0          | Min:0          Max:65535      Units:
+PID 2006   | NumberInput  | Label: Port                           | Type: Int32      | Collection: ServProtocol         | Default: 0          | Min:0          Max:65535      Units:
+PID 2007   | Collection   | Label: Backup Server Mode             | Type: String     | Collection: bkpSrvMode           | Default: 0          | Min:           Max:           Units:
+PID 2008   | TextBoxDomain | Label: Backup Server Domain           | Type: String     | Collection: ServProtocol         | Default:            | Min:0          Max:65535      Units:
+PID 2009   | NumberInput  | Label: Backup Server Port             | Type: Int32      | Collection: ServProtocol         | Default: 0          | Min:0          Max:65535      Units:
+PID 2010   | Item         | Label: Backup Server Mode             | Type: String     | Collection: bkpSrvMode           | Default: 0          | Min:           Max:           Units:
+PID 2011   | Placeholder  | Label: GPRS Context                   | Type: String     | Collection: DisEn                | Default: 1          | Min:           Max:           Units:
+PID 2012   | Collection   | Label: GPRS Context                   | Type: String     | Collection: DisEn                | Default: 1          | Min:           Max:           Units:
+PID 2013   | TextBox      | Label: APN                            | Type: String     | Collection:                      | Default:            | Min:           Max:           Units:
+PID 2014   | TextBox      | Label: APN Username                   | Type: String     | Collection:                      | Default:            | Min:           Max:           Units:
+PID 2100   | ViewConfiguration | Label: Network mode                   | Type:            | Collection: NetworkMode          | Default: 0          | Min:           Max:           Units:
+PID 2101   | Collection   | Label: Network mode                   | Type:            | Collection: NetworkMode          | Default: 0          | Min:           Max:           Units:
+PID 2102   | Collection   | Label: IOT Network mode               | Type:            | Collection: IOTNetworkMode       | Default: 2          | Min:           Max:           Units:
+PID 2103   | Collection   | Label: Advanced bands                 | Type:            | Collection: AdvancedBandsNB1_BG96 | Default: 16383      | Min:           Max:           Units:
+PID 2104   | Item         | Label: Code                           | Type: Int32      | Collection:                      | Default: 0          | Min:0          Max:999999     Units:
+PID 10000  | TableLabel   | Label: Send Period                    | Type: Int32      | Collection:                      | Default: 3600       | Min:0          Max:2592000    Units:s
+PID 10004  | NumberInput  | Label: Min Period Home                | Type: Int32      | Collection:                      | Default: 3600       | Min:0          Max:2592000    Units:s
+PID 10005  | NumberInput  | Label: Min Saved Records Home         | Type: Int32      | Collection:                      | Default: 1          | Min:1          Max:255        Units:s
+PID 10007  | GroupBox     | Label: GPRS Down Time Home            | Type: Int32      | Collection:                      | Default: 0          | Min:0          Max:60         Units:min
+PID 10008  | NumberInput  | Label: GPRS Down Time Home            | Type: Int32      | Collection:                      | Default: 0          | Min:0          Max:60         Units:min
+PID 10050  | TableLabel   | Label: Min Saved Records              | Type: Int32      | Collection:                      | Default: 300        | Min:0          Max:2592000    Units:s
+PID 10051  | NumberInput  | Label: Min Period Home                | Type: Int32      | Collection:                      | Default: 300        | Min:0          Max:2592000    Units:s
+PID 10052  | NumberInput  | Label: Min Distance Home              | Type: Int32      | Collection:                      | Default: 100        | Min:0          Max:65535      Units:m
+PID 10053  | NumberInput  | Label: Min Angle Home                 | Type: Int32      | Collection:                      | Default: 10         | Min:0          Max:180        Units:deg
+PID 10054  | NumberInput  | Label: Min Speed Delta Home           | Type: Int32      | Collection:                      | Default: 10         | Min:0          Max:100        Units:
+PID 10055  | NumberInput  | Label: Min Saved Records Home         | Type: Int32      | Collection:                      | Default: 1          | Min:1          Max:255        Units:s
+PID 10057  | GroupBox     | Label: GPRS Down Time Home            | Type: Int32      | Collection:                      | Default: 0          | Min:0          Max:60         Units:min
+PID 10058  | NumberInput  | Label: GPRS Down Time Home            | Type: Int32      | Collection:                      | Default: 0          | Min:0          Max:60         Units:min
+PID 10100  | Column       | Label: Min Period Roaming             | Type: Int32      | Collection:                      | Default: 120        | Min:0          Max:2592000    Units:s
+PID 10104  | NumberInput  | Label: Min Period Roaming             | Type: Int32      | Collection:                      | Default: 3600       | Min:0          Max:2592000    Units:
+PID 10105  | NumberInput  | Label: Min Saved Records Roaming      | Type: Int32      | Collection:                      | Default: 1          | Min:1          Max:255        Units:
+PID 10107  | GroupBox     | Label: GPRS Down Time Home            | Type: Int32      | Collection:                      | Default: 0          | Min:0          Max:50         Units:min
+PID 10108  | NumberInput  | Label: GPRS Down Time Home            | Type: Int32      | Collection:                      | Default: 30         | Min:0          Max:60         Units:min
+PID 10150  | Column       | Label: Min Period Roaming             | Type: Int32      | Collection:                      | Default: 120        | Min:0          Max:2592000    Units:s
+PID 10151  | NumberInput  | Label: Min Period Roaming             | Type: Int32      | Collection:                      | Default: 300        | Min:0          Max:2592000    Units:
+PID 10152  | NumberInput  | Label: Min Distance Roaming           | Type: Int32      | Collection:                      | Default: 100        | Min:0          Max:65535      Units:
+PID 10153  | NumberInput  | Label: Min Angle Roaming              | Type: Int32      | Collection:                      | Default: 10         | Min:0          Max:180        Units:
+PID 10154  | NumberInput  | Label: Min Speed Delta Roaming        | Type: Int32      | Collection:                      | Default: 10         | Min:0          Max:100        Units:
+PID 10155  | NumberInput  | Label: Min Saved Records Roaming      | Type: Int32      | Collection:                      | Default: 1          | Min:1          Max:255        Units:
+PID 10157  | GroupBox     | Label: GPRS Down Time Home            | Type: Int32      | Collection:                      | Default: 0          | Min:0          Max:50         Units:min
+PID 10158  | NumberInput  | Label: GPRS Down Time Home            | Type: Int32      | Collection:                      | Default: 30         | Min:0          Max:60         Units:min
+PID 10200  | Column       | Label: Min Period Unknown             | Type: Int32      | Collection:                      | Default: 120        | Min:0          Max:2592000    Units:
+PID 10204  | NumberInput  | Label: Min Period Unknown             | Type: Int32      | Collection:                      | Default: 3600       | Min:0          Max:2592000    Units:
+PID 10205  | NumberInput  | Label: Min Saved Records Unknown      | Type: Int32      | Collection:                      | Default: 1          | Min:1          Max:255        Units:
+PID 10207  | GroupBox     | Label: GPRS Down Time Home            | Type: Int32      | Collection:                      | Default: 2          | Min:0          Max:50         Units:min
+PID 10208  | NumberInput  | Label: GPRS Down Time Home            | Type: Int32      | Collection:                      | Default: 30         | Min:0          Max:60         Units:min
+PID 10250  | Column       | Label: Min Period Unknown             | Type: Int32      | Collection:                      | Default: 120        | Min:0          Max:2592000    Units:
+PID 10251  | NumberInput  | Label: Min Period Unknown             | Type: Int32      | Collection:                      | Default: 300        | Min:0          Max:2592000    Units:
+PID 10252  | NumberInput  | Label: Min Distance Unknown           | Type: Int32      | Collection:                      | Default: 100        | Min:0          Max:65535      Units:
+PID 10253  | NumberInput  | Label: Min Angle Unknown              | Type: Int32      | Collection:                      | Default: 10         | Min:0          Max:180        Units:
+PID 10254  | NumberInput  | Label: Min Speed Delta Unknown        | Type: Int32      | Collection:                      | Default: 10         | Min:0          Max:100        Units:
+PID 10255  | NumberInput  | Label: Min Saved Records Unknown      | Type: Int32      | Collection:                      | Default: 1          | Min:1          Max:255        Units:
+PID 10257  | GroupBox     | Label: GPRS Down Time Home            | Type: Int32      | Collection:                      | Default: 2          | Min:0          Max:50         Units:min
+PID 10258  | NumberInput  | Label: GPRS Down Time Home            | Type: Int32      | Collection:                      | Default: 30         | Min:0          Max:60         Units:min

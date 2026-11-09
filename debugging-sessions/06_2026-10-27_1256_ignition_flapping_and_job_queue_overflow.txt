@@ -1,0 +1,659 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.10.27 13:00:29 =~=~=~=~=~=~=~=~=~=~=~=
+ivated
+[2026.10.27 12:56:24]-[HW.INIT]-> Feature OneWire is Active
+[2026.10.27 12:56:24]-[HW.INIT]-> Feature NTC (pcb temperature) resistors is 4.7k
+Detected Hw: FMC650 HW:17
+[2026.10.27 12:56:24]-[LFS]-> Initializing flash device...
+[2026.10.27 12:56:24]-[Flash.Driver]-> Device ID: 0B4018
+[2026.10.27 12:56:24]-[Flash.Driver]-> XTX device detected
+[2026.10.27 12:56:24]-[Flash.Driver]-> Configuring
+[2026.10.27 12:56:24]-[LFS]-> Block cnt: 4096
+[2026.10.27 12:56:24]-[LFS]-> Mounting file system...
+[n changed:1->0 (128) Ext:14850(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:26]-IGN Ignition changed:0->1 (2) Ext:14850(23500,30000)
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:00:26]-[T.RECMNG] Rec saved seq:2a490
+[2026.10.27 13:00:26]-[T.RECMNG] Offset:576 attr:7006
+[2026.10.27 13:00:26]-[T.RECMNG] SQ: 173201|Opt-Size:2320 cnt:145
+[2026.10.27 13:00:27]-IGN Ignition changed:1->0 (128) Ext:14913(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:27]-IGN Ignition changed:0->1 (2) Ext:14913(23500,30000)
+[2026.10.27 13:00:27]-[T.RECMNG] Rec saved seq:2a491
+[2026.10.27 13:00:27]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:27]-IGN Ignition changed:1->0 (128) Ext:14926(23500,30000)
+[OverSpeeding]	->Ign is OFF!	->Speed is 0![Odometer]->FSM Reset
+[2026.10.27 13:00:27]-IGN Ignition changed:0->1 (2) Ext:14926(23500,30000)
+[2026.10.27 13:00:27]-[T.RECMNG] Offset:580 attr:7006
+[2026.10.27 13:00:27]-[T.RECMNG] SQ: 173202|Opt-Size:2336 cnt:146
+[2026.10.27 13:00:27]-IGN Ignition changed:1->0 (128) Ext:14989(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:27]-IGN Ignition changed:0->1 (2) Ext:14989(23500,30000)
+[2026.10.27 13:00:28]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:28]-IGN Ignition changed:1->0 (128) Ext:14989(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:28]-IGN Ignition changed:0->1 (2) Ext:15026(23500,30000)
+[2026.10.27 13:00:28]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:28]-IGN Ignition changed:1->0 (128) Ext:15026(23500,30000)
+[2026.10.27 13:00:28]-[T.RECMNG] Rec saved seq:2a492
+[Odometer]->FSM Reset
+[2026.10.27 13:00:28]-IGN Ignition changed:0->1 (2) Ext:15026(23500,30000)
+[2026.10.27 13:00:28]-[ADC]->  [RAW.ADC]->external[15039], gps_ant[8 mA], contr3V3[3285]	Hw Ver[2801], Ibat[2/0] mV/mA, Ubat[9465] Temperature:[0.38]	AN1[0], AN2[9], AN3[9], AN4[0] GPS ANT{2041,1986}	contr5V[4974], contrSD[3288] contr4V1[3930], contrkln12_24[12331]
+
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:00:28]-[FMS.ED]-> FMSED not running - no odometer data
+[2026.10.27 13:00:28]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:28]-IGN Ignition changed:1->0 (128) Ext:15039(23500,30000)
+[2026.10.27 13:00:28]-[T.RECMNG] Offset:584 attr:7006
+[Odometer]->FSM Reset
+[2026.10.27 13:00:28]-IGN Ignition changed:0->1 (2) Ext:15039(23500,30000)
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:28]-[T.RECMNG] SQ: 173203|Opt-Size:2352 cnt:147
+[2026.10.27 13:00:28]-IGN Ignition changed:1->0 (128) Ext:15127(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:28]-IGN Ignition changed:0->1 (2) Ext:15127(23500,30000)
+[2026.10.27 13:00:29]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:29]-IGN Ignition changed:1->0 (128) Ext:15115(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:29]-IGN Ignition changed:0->1 (2) Ext:15115(23500,30000)
+[2026.10.27 13:00:29]-[T.RECMNG] Rec saved seq:2a493
+[2026.10.27 13:00:29]-[T.RECMNG] Offset:588 attr:7006
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:29]-[T.RECMNG] SQ: 173204|Opt-Size:2368 cnt:148
+[2026.10.27 13:00:29]-IGN Ignition changed:1->0 (128) Ext:15367(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:29]-IGN Ignition changed:0->1 (2) Ext:15367(23500,30000)
+[2026.10.27 13:00:30]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:30]-IGN Ignition changed:1->0 (128) Ext:15456(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:30]-IGN Ignition changed:0->1 (2) Ext:15456(23500,30000)
+[2026.10.27 13:00:30]-[T.RECMNG] Rec saved seq:2a494
+[2026.10.27 13:00:30]-[T.RECMNG] Offset:592 attr:7006
+[2026.10.27 13:00:30]-[WD.FUNC]-> counter:2 Cnt:1 Limit:930
+[2026.10.27 13:00:30]-[WD.FUNC]-> counter:3 Cnt:1 Limit:930
+[2026.10.27 13:00:30]-[T.RECMNG] SQ: 173205|Opt-Size:2384 cnt:149
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:30]-IGN Ignition changed:1->0 (128) Ext:15607(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:30]-IGN Ignition changed:0->1 (2) Ext:15607(23500,30000)
+[2026.10.27 13:00:30]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:30]-IGN Ignition changed:1->0 (128) Ext:15632(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:31]-IGN Ignition changed:0->1 (2) Ext:15645(23500,30000)
+[2026.10.27 13:00:31]-[T.RECMNG] Rec saved seq:2a495
+[2026.10.27 13:00:31]-[T.RECMNG] Offset:596 attr:7006
+[2026.10.27 13:00:31]-[T.RECMNG] SQ: 173206|Opt-Size:2400 cnt:150
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:32]-IGN Ignition changed:1->0 (128) Ext:15948(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:32]-IGN Ignition changed:0->1 (2) Ext:15948(23500,30000)
+[2026.10.27 13:00:32]-[T.RECMNG] Rec saved seq:2a496
+[2026.10.27 13:00:32]-[T.RECMNG] Offset:600 attr:7006
+[2026.10.27 13:00:32]-[T.RECMNG] SQ: 173207|Opt-Size:2416 cnt:151
+[2026.10.27 13:00:32]-IGN Ignition changed:1->0 (128) Ext:15973(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:32]-IGN Ignition changed:0->1 (2) Ext:15961(23500,30000)
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:33]-[T.RECMNG] Rec saved seq:2a497
+[2026.10.27 13:00:33]-[T.RECMNG] Offset:604 attr:7006
+[2026.10.27 13:00:33]-[T.RECMNG] SQ: 173208|Opt-Size:2432 cnt:152
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:00:33]-IGN Ignition changed:1->0 (128) Ext:15948(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:33]-IGN Ignition changed:0->1 (2) Ext:15897(23500,30000)
+[2026.10.27 13:00:34]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:34]-IGN Ignition changed:1->0 (128) Ext:15986(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:34]-IGN Ignition changed:0->1 (2) Ext:15986(23500,30000)
+[2026.10.27 13:00:34]-[T.RECMNG] Rec saved seq:2a498
+[2026.10.27 13:00:34]-[T.RECMNG] Offset:608 attr:7006
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:34]-[T.RECMNG] SQ: 173209|Opt-Size:2448 cnt:153
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:00:35]-IGN Ignition changed:1->0 (128) Ext:15809(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:35]-IGN Ignition changed:0->1 (2) Ext:15809(23500,30000)
+[2026.10.27 13:00:35]-[T.RECMNG] Rec saved seq:2a499
+[2026.10.27 13:00:35]-[T.RECMNG] Offset:612 attr:7006
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:35]-[T.RECMNG] SQ: 173210|Opt-Size:2464 cnt:154
+[2026.10.27 13:00:35]-IGN Ignition changed:1->0 (128) Ext:15822(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:35]-IGN Ignition changed:0->1 (2) Ext:15822(23500,30000)
+[2026.10.27 13:00:35]-[AXL.CLBR]-> Acc buffer is filled, start processing (cnt: 20, spd:0.000000)
+[2026.10.27 13:00:35]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:35]-IGN Ignition changed:1->0 (128) Ext:15897(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:36]-IGN Ignition changed:0->1 (2) Ext:15796(23500,30000)
+[2026.10.27 13:00:36]-[T.RECMNG] Rec saved seq:2a49a
+[2026.10.27 13:00:36]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:36]-IGN Ignition changed:1->0 (128) Ext:15822(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:36]-IGN Ignition changed:0->1 (2) Ext:15822(23500,30000)
+[2026.10.27 13:00:36]-[T.RECMNG] Offset:616 attr:7006
+[2026.10.27 13:00:36]-[T.RECMNG] SQ: 173211|Opt-Size:2480 cnt:155
+[OverSpeeding]	->Speed is 0![TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:00:36]-IGN Ignition changed:1->0 (128) Ext:15683(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:37]-IGN Ignition changed:0->1 (2) Ext:15594(23500,30000)
+[2026.10.27 13:00:37]-[T.RECMNG] Rec saved seq:2a49b
+[2026.10.27 13:00:37]-[T.RECMNG] Offset:620 attr:7006
+[2026.10.27 13:00:37]-[T.RECMNG] SQ: 173212|Opt-Size:2496 cnt:156
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:37]-IGN Ignition changed:1->0 (128) Ext:15822(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:37]-IGN Ignition changed:0->1 (2) Ext:15860(23500,30000)
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:00:37]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:37]-IGN Ignition changed:1->0 (128) Ext:15822(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:37]-IGN Ignition changed:0->1 (2) Ext:15822(23500,30000)
+[2026.10.27 13:00:38]-[T.RECMNG] Rec saved seq:2a49c
+[2026.10.27 13:00:38]-[T.RECMNG] Offset:624 attr:7006
+[2026.10.27 13:00:38]-[T.RECMNG] SQ: 173213|Opt-Size:2512 cnt:157
+<<[NRF]AT
+[BATRAM.INFO]:
+Boot Sign:    55FF
+Charge Timer: 11236
+GC Timer:     2676
+Auth Driving: 0
+Restart counters:
+ Low Power: 0
+ WDG:       0
+ Software:  104
+ Power:     5
+ Pin:       0
+ Unknown:   0
+ Total:     109
+[2026.10.27 13:00:38]-[FMS.ED]-> FMSED not running - no odometer data
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:39]-[T.RECMNG] Rec saved seq:2a49d
+[2026.10.27 13:00:39]-[T.RECMNG] Offset:628 attr:7006
+[2026.10.27 13:00:39]-[T.RECMNG] SQ: 173214|Opt-Size:2528 cnt:158
+[2026.10.27 13:00:39]-IGN Ignition changed:1->0 (128) Ext:15771(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:39]-IGN Ignition changed:0->1 (2) Ext:15847(23500,30000)
+[2026.10.27 13:00:39]-IGN Ignition changed:1->0 (128) Ext:15834(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:39]-IGN Ignition changed:0->1 (2) Ext:15834(23500,30000)
+[2026.10.27 13:00:39]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:39]-IGN Ignition changed:1->0 (128) Ext:15822(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:39]-IGN Ignition changed:0->1 (2) Ext:15809(23500,30000)
+[2026.10.27 13:00:39]-[T.RECMNG] Rec saved seq:2a49e
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:40]-[T.RECMNG] Offset:632 attr:7006
+[2026.10.27 13:00:40]-[T.RECMNG] SQ: 173215|Opt-Size:2544 cnt:159
+[2026.10.27 13:00:40]-IGN Ignition changed:1->0 (128) Ext:15834(23500,30000)
+[2026.10.27 13:00:40]-[WD.FUNC]-> counter:2 Cnt:1 Limit:930
+[2026.10.27 13:00:40]-[WD.FUNC]-> counter:3 Cnt:1 Limit:930
+[Odometer]->FSM Reset
+[2026.10.27 13:00:40]-IGN Ignition changed:0->1 (2) Ext:15809(23500,30000)
+[2026.10.27 13:00:40]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:40]-IGN Ignition changed:1->0 (128) Ext:15695(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:40]-IGN Ignition changed:0->1 (2) Ext:15733(23500,30000)
+[2026.10.27 13:00:40]-[T.RECMNG] Rec saved seq:2a49f
+[2026.10.27 13:00:40]-[T.RECMNG] Offset:636 attr:7006
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:41]-[T.RECMNG] SQ: 173216|Opt-Size:2560 cnt:160
+[2026.10.27 13:00:41]-IGN Ignition changed:1->0 (128) Ext:15771(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:41]-IGN Ignition changed:0->1 (2) Ext:15708(23500,30000)
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:00:41]-[AXL.CLBR]-> Acc buffer is filled, start processing (cnt: 20, spd:0.000000)
+[2026.10.27 13:00:41]-[T.RECMNG] Rec saved seq:2a4a0
+[2026.10.27 13:00:41]-[T.RECMNG] Offset:640 attr:7006
+[2026.10.27 13:00:42]-[T.RECMNG] SQ: 173217|Opt-Size:2576 cnt:161
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:42]-IGN Ignition changed:1->0 (128) Ext:15683(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:42]-IGN Ignition changed:0->1 (2) Ext:15632(23500,30000)
+[TACHO]  DDD Available: 0, Timers [0:3600][0:300]
+[2026.10.27 13:00:42]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:42]-IGN Ignition changed:1->0 (128) Ext:15329(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:42]-IGN Ignition changed:0->1 (2) Ext:15393(23500,30000)
+[2026.10.27 13:00:42]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:42]-IGN Ignition changed:1->0 (128) Ext:15405(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:42]-IGN Ignition changed:0->1 (2) Ext:15405(23500,30000)
+[2026.10.27 13:00:42]-[T.RECMNG] Rec saved seq:2a4a1
+[2026.10.27 13:00:42]-[T.RECMNG] Offset:644 attr:7006
+[2026.10.27 13:00:42]-[T.RECMNG] SQ: 173218|Opt-Size:2592 cnt:162
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:43]-IGN Ignition changed:1->0 (128) Ext:15456(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:43]-IGN Ignition changed:0->1 (2) Ext:15456(23500,30000)
+[2026.10.27 13:00:43]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:43]-IGN Ignition changed:1->0 (128) Ext:15443(23500,30000)
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[Odometer]->FSM Reset
+[2026.10.27 13:00:43]-IGN Ignition changed:0->1 (2) Ext:15493(23500,30000)
+[2026.10.27 13:00:43]-[T.RECMNG] Rec saved seq:2a4a2
+[2026.10.27 13:00:43]-[T.RECMNG] Offset:648 attr:7006
+[2026.10.27 13:00:43]-[T.RECMNG] SQ: 173219|Opt-Size:2608 cnt:163
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:44]-[AXL.CLBR]-> Acc buffer is filled, start processing (cnt: 20, spd:0.000000)
+[2026.10.27 13:00:44]-[T.RECMNG] Rec saved seq:2a4a3
+[2026.10.27 13:00:44]-[T.RECMNG] Offset:652 attr:7006
+[2026.10.27 13:00:44]-[T.RECMNG] SQ: 173220|Opt-Size:2624 cnt:164
+[OverSpeeding]	->Speed is 0![TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:00:45]-IGN Ignition changed:1->0 (128) Ext:15266(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:45]-IGN Ignition changed:0->1 (2) Ext:15241(23500,30000)
+[2026.10.27 13:00:45]-IGN Ignition changed:1->0 (128) Ext:15241(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:45]-IGN Ignition changed:0->1 (2) Ext:15241(23500,30000)
+[2026.10.27 13:00:45]-[T.RECMNG] Rec saved seq:2a4a4
+[2026.10.27 13:00:45]-[T.RECMNG] Offset:656 attr:7006
+[2026.10.27 13:00:45]-[T.RECMNG] SQ: 173221|Opt-Size:2640 cnt:165
+[2026.10.27 13:00:46]-IGN Ignition changed:1->0 (128) Ext:15279(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:46]-IGN Ignition changed:0->1 (2) Ext:15304(23500,30000)
+[2026.10.27 13:00:46]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:00:46]-IGN Ignition changed:1->0 (128) Ext:15228(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:46]-IGN Ignition changed:0->1 (2) Ext:15241(23500,30000)
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:46]-[T.RECMNG] Rec saved seq:2a4a5
+[2026.10.27 13:00:46]-[T.RECMNG] Offset:660 attr:7006
+[2026.10.27 13:00:46]-[T.RECMNG] SQ: 173222|Opt-Size:2656 cnt:166
+[2026.10.27 13:00:47]-[T.RECMNG] Rec saved seq:2a4a6
+[2026.10.27 13:00:47]-[AXL.CLBR]-> Acc buffer is filled, start processing (cnt: 20, spd:0.000000)
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:47]-[T.RECMNG] Offset:664 attr:7006
+[2026.10.27 13:00:47]-[T.RECMNG] SQ: 173223|Opt-Size:2672 cnt:167
+[2026.10.27 13:00:48]-[FMS.ED]-> FMSED not running - no odometer data
+[2026.10.27 13:00:48]-[T.RECMNG] Rec saved seq:2a4a7
+[2026.10.27 13:00:48]-[T.RECMNG] Offset:668 attr:7006
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:48]-[T.RECMNG] SQ: 173224|Opt-Size:2688 cnt:168
+[2026.10.27 13:00:49]-IGN Ignition changed:1->0 (128) Ext:15115(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:49]-IGN Ignition changed:0->1 (2) Ext:15165(23500,30000)
+[2026.10.27 13:00:49]-[T.RECMNG] Rec saved seq:2a4a8
+[2026.10.27 13:00:49]-[T.RECMNG] Offset:672 attr:7006
+[2026.10.27 13:00:49]-[T.RECMNG] SQ: 173225|Opt-Size:2704 cnt:169
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:50]-[WD.FUNC]-> counter:2 Cnt:1 Limit:930
+[2026.10.27 13:00:50]-[WD.FUNC]-> counter:3 Cnt:1 Limit:930
+[2026.10.27 13:00:50]-[T.RECMNG] Rec saved seq:2a4a9
+[2026.10.27 13:00:50]-[T.RECMNG] Offset:676 attr:7006
+[2026.10.27 13:00:50]-[T.RECMNG] SQ: 173226|Opt-Size:2720 cnt:170
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:51]-IGN Ignition changed:1->0 (128) Ext:14193(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:51]-IGN Ignition changed:0->1 (2) Ext:14168(23500,30000)
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:00:51]-[T.RECMNG] Rec saved seq:2a4aa
+[2026.10.27 13:00:51]-[T.RECMNG] Offset:680 attr:7006
+[2026.10.27 13:00:51]-[T.RECMNG] SQ: 173227|Opt-Size:2736 cnt:171
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:52]-IGN Ignition changed:1->0 (128) Ext:14231(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:52]-IGN Ignition changed:0->1 (2) Ext:14231(23500,30000)
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:00:52]-[T.RECMNG] Rec saved seq:2a4ab
+[2026.10.27 13:00:52]-[T.RECMNG] Offset:684 attr:7006
+[2026.10.27 13:00:53]-[T.RECMNG] SQ: 173228|Opt-Size:2752 cnt:172
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:53]-IGN Ignition changed:1->0 (128) Ext:14219(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:53]-IGN Ignition changed:0->1 (2) Ext:14206(23500,30000)
+<<[NRF]AT
+[2026.10.27 13:00:53]-[T.RECMNG] Rec saved seq:2a4ac
+[2026.10.27 13:00:53]-[T.RECMNG] Offset:688 attr:7006
+[2026.10.27 13:00:54]-[T.RECMNG] SQ: 173229|Opt-Size:2768 cnt:173
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:54]-IGN Ignition changed:1->0 (128) Ext:14219(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:54]-IGN Ignition changed:0->1 (2) Ext:14156(23500,30000)
+[2026.10.27 13:00:54]-[T.RECMNG] Rec saved seq:2a4ad
+[2026.10.27 13:00:54]-[T.RECMNG] Offset:692 attr:7006
+[2026.10.27 13:00:55]-[T.RECMNG] SQ: 173230|Opt-Size:2784 cnt:174
+[2026.10.27 13:00:55]-IGN Ignition changed:1->0 (128) Ext:14269(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:55]-IGN Ignition changed:0->1 (2) Ext:14269(23500,30000)
+[2026.10.27 13:00:55]-IGN Ignition changed:1->0 (128) Ext:14294(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:55]-IGN Ignition changed:0->1 (2) Ext:14269(23500,30000)
+[2026.10.27 13:00:55]-[AXL.CLBR]-> Acc buffer is filled, start processing (cnt: 20, spd:0.000000)
+[2026.10.27 13:00:55]-[T.RECMNG] Rec saved seq:2a4ae
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:55]-[T.RECMNG] Offset:696 attr:7006
+[2026.10.27 13:00:55]-[T.RECMNG] SQ: 173231|Opt-Size:2800 cnt:175
+[2026.10.27 13:00:56]-IGN Ignition changed:1->0 (128) Ext:14774(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:56]-IGN Ignition changed:0->1 (2) Ext:14799(23500,30000)
+[2026.10.27 13:00:56]-[T.RECMNG] Rec saved seq:2a4af
+[2026.10.27 13:00:56]-[T.RECMNG] Offset:700 attr:7006
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:56]-[T.RECMNG] SQ: 173232|Opt-Size:2816 cnt:176
+[2026.10.27 13:00:57]-IGN Ignition changed:1->0 (128) Ext:14799(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:57]-IGN Ignition changed:0->1 (2) Ext:14850(23500,30000)
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:00:57]-[J1708]-> RxBt: 0, Msg: 0, TxReq: 0, TxFailed: 0
+[2026.10.27 13:00:57]-IGN Ignition changed:1->0 (128) Ext:14825(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:57]-IGN Ignition changed:0->1 (2) Ext:14787(23500,30000)
+[2026.10.27 13:00:57]-[T.RECMNG] Rec saved seq:2a4b0
+[2026.10.27 13:00:57]-[T.RECMNG] Offset:704 attr:7006
+[2026.10.27 13:00:57]-[T.RECMNG] SQ: 173233|Opt-Size:2832 cnt:177
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:58]-IGN Ignition changed:1->0 (128) Ext:14257(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:58]-IGN Ignition changed:0->1 (2) Ext:14257(23500,30000)
+[2026.10.27 13:00:58]-[1-Wire] OneWire Health @:404
+	Run:267
+	Found:0
+	NotFoundAll:267
+	NotFound Until Bus Reset:267
+	T Run:0
+	T Success:0
+	T Conv Fail:0
+	T Read Fail:0
+	Short:0
+	Not Release:0
+	Wrong CRC:0
+	NotFound:267
+[2026.10.27 13:00:58]-[FMS.ED]-> FMSED not running - no odometer data
+[2026.10.27 13:00:58]-[T.RECMNG] Rec saved seq:2a4b1
+[2026.10.27 13:00:58]-[T.RECMNG] Offset:708 attr:7006
+[2026.10.27 13:00:58]-[T.RECMNG] SQ: 173234|Opt-Size:2848 cnt:178
+[OverSpeeding]	->Speed is 0![2026.10.27 13:00:59]-IGN Ignition changed:1->0 (128) Ext:14799(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:00:59]-IGN Ignition changed:0->1 (2) Ext:14446(23500,30000)
+[2026.10.27 13:00:59]-[T.RECMNG] Rec saved seq:2a4b2
+[2026.10.27 13:00:59]-[T.RECMNG] Offset:712 attr:7006
+[2026.10.27 13:00:59]-[T.RECMNG] SQ: 173235|Opt-Size:2864 cnt:179
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:00]-[WD.FUNC]-> counter:2 Cnt:1 Limit:930
+[2026.10.27 13:01:00]-[WD.FUNC]-> counter:3 Cnt:1 Limit:930
+[2026.10.27 13:01:00]-IGN Ignition changed:1->0 (128) Ext:14900(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:00]-IGN Ignition changed:0->1 (2) Ext:14787(23500,30000)
+[2026.10.27 13:01:00]-[T.RECMNG] Rec saved seq:2a4b3
+[2026.10.27 13:01:00]-[T.RECMNG] Offset:716 attr:7006
+[2026.10.27 13:01:00]-[T.RECMNG] SQ: 173236|Opt-Size:2880 cnt:180
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:01]-[T.RECMNG] Rec saved seq:2a4b4
+[2026.10.27 13:01:01]-[T.RECMNG] Offset:720 attr:7006
+[2026.10.27 13:01:01]-[T.RECMNG] SQ: 173237|Opt-Size:2896 cnt:181
+[2026.10.27 13:01:02]-IGN Ignition changed:1->0 (128) Ext:15001(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:02]-IGN Ignition changed:0->1 (2) Ext:14989(23500,30000)
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:02]-[T.RECMNG] Rec saved seq:2a4b5
+[2026.10.27 13:01:02]-[T.RECMNG] Offset:724 attr:7006
+[2026.10.27 13:01:02]-[T.RECMNG] SQ: 173238|Opt-Size:2912 cnt:182
+[2026.10.27 13:01:03]-[T.RECMNG] Rec saved seq:2a4b6
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:03]-[T.RECMNG] Offset:728 attr:7006
+[2026.10.27 13:01:03]-[T.RECMNG] SQ: 173239|Opt-Size:2928 cnt:183
+[2026.10.27 13:01:04]-IGN Ignition changed:1->0 (128) Ext:15216(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:04]-IGN Ignition changed:0->1 (2) Ext:15241(23500,30000)
+[2026.10.27 13:01:04]-[T.RECMNG] Rec saved seq:2a4b7
+[2026.10.27 13:01:04]-[T.RECMNG] Offset:732 attr:7006
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:04]-[T.RECMNG] SQ: 173240|Opt-Size:2944 cnt:184
+[2026.10.27 13:01:05]-IGN Ignition changed:1->0 (128) Ext:15178(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:05]-IGN Ignition changed:0->1 (2) Ext:15203(23500,30000)
+[2026.10.27 13:01:05]-IGN Ignition changed:1->0 (128) Ext:15115(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:05]-IGN Ignition changed:0->1 (2) Ext:15115(23500,30000)
+[2026.10.27 13:01:05]-[T.RECMNG] Rec saved seq:2a4b8
+[2026.10.27 13:01:05]-[T.RECMNG] Offset:736 attr:7006
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:05]-[T.RECMNG] SQ: 173241|Opt-Size:2960 cnt:185
+[2026.10.27 13:01:06]-[T.RECMNG] Rec saved seq:2a4b9
+[2026.10.27 13:01:06]-[T.RECMNG] Offset:740 attr:7006
+[2026.10.27 13:01:06]-[T.RECMNG] SQ: 173242|Opt-Size:2976 cnt:186
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:07]-IGN Ignition changed:1->0 (128) Ext:15506(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:07]-IGN Ignition changed:0->1 (2) Ext:15493(23500,30000)
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:01:07]-[T.RECMNG] Rec saved seq:2a4ba
+[2026.10.27 13:01:07]-[T.RECMNG] Offset:744 attr:7006
+[2026.10.27 13:01:07]-[T.RECMNG] SQ: 173243|Opt-Size:2992 cnt:187
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:07]-IGN Ignition changed:1->0 (128) Ext:15367(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:07]-IGN Ignition changed:0->1 (2) Ext:15367(23500,30000)
+Fatal dump Mode:Periodic Uptime:3min
+addr2line.exe -e *.axf -a -f ...
+Uptime: 379, timestamp 1793105784427
+Active task ID: 5 - [WDG]
+ID: 999 - [Main Stack] 
+ID: 0 - [AppSave] 0x700DC398 0x70089A4A 0x7009297C 0x700899D2 0x7009C868 
+ID: 1 - [CAN1] 0x7006E49C 0x7002C172 
+ID: 2 - [CAN2] 0x7006E49C 0x7002A2F4 
+ID: 3 - [Dsleep] 0x7006E414 0x700A354E 
+ID: 4 - [EventQ] 0x700DC398 0x7006E5F0 0x7003576A 0x7007140E 
+ID: 5 - [WDG] 0x7009FD06 0x700666E8 0x700EEAF4 
+ID: 6 - [Uart] [2026.10.27 13:01:08]-[T.RECMNG] Rec saved seq:2a4bb
+0x7006E49C 0x700ECE7C 
+ID: 7 - [Modem.Rx] 0x7006E754 0x700CFAF0 
+ID: 8 - [AxlDProc] 0x7006E49C 0x70024D5A 
+ID: 9 - [AxlReader] 0x7006E49C 0x70091BE8 0x70024F2A 
+ID: 10 - [Scheduler] 0x700221F0 0x700219A2 0x7008F902 0x700A6E20 0x700BD58A 
+ID: 11 - [HBeat] 0x7006E49C 0x700B04C0 
+ID: 12 - [Oper] 0x7006E49C 0x7006E2EE 
+ID: 13 - [TcpCmd] 0x7006E49C 0x700E8920 
+ID: 14 - [SmsE] 0x7006E49C 0x700E0A04 
+ID: 15 - [TachoSend] 
+ID: 16 - [TachoMain] 
+ID: 17 - [SDLog] 0x700879F8 0x700DC398 0x7006E5F0 0x7003B2DC 0x70087A00 
+ID: 18 - [FlashJob] 0x700DC398 0x700B652A 0x700B62E2 0x700B8682 0x700B8614 
+ID: 19 - [Modem Data] 0x7006E6C6 0x700CDE48 
+ID: 20 - [Trace Task] 0x7006E49C 0x700EACAA 
+ID: 21 - [UNK] 
+ID: 22 - [UPD task] 0x7006E6C6 0x700ED9A4 
+ID: 23 - [SiD Gen] 0x7006E6C6 0x700659F4 
+ID: 24 - [Sid Tim] 0x7006E414 0x70065B8E 
+ID: 25 - [BTLE.API] 0x7006E6C6 0x7004B0C6 0x7009A1B0 
+ID: 26 - [UNK] 
+ID: 27 - [LVCAN.API] 0x7006E49C 0x7005DD10 
+ID: 28 - [TDM.APP] 0x7006E49C 0x70081200 
+ID: 29 - [OneWire] 0x7006E414 0x7006F434 
+ID: 30 - [MCAN] 0x7006E6C6 0x7006BA2E 
+ID: 31 - [GPS.T] 0x7006E6C6 0x7003C60A 
+ID: 32 - [UNK] 
+
+[2026.10.27 13:01:08]-[SCH]->  PMinC:4 Ign:1 GPS st:1 Point:2.352200,48.856600 speed:0 date: 2026/10/27 13:1:8 Freq:0
+[2026.10.27 13:01:08]-[IGN.CNT]-> Current 0 value -> 23560287
+
+[2026.10.27 13:01:08]-[FMS.ED]-> FMSED not running - no odometer data
+[2026.10.27 13:01:08]-[T.RECMNG] Offset:748 attr:7006
+[2026.10.27 13:01:08]-[T.RECMNG] SQ: 173244|Opt-Size:3008 cnt:188
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:09]-IGN Ignition changed:1->0 (128) Ext:15607(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:09]-IGN Ignition changed:0->1 (2) Ext:15468(23500,30000)
+FotaWeb: 11 min passed since last check limit:40
+[2026.10.27 13:01:09]-IGN Ignition changed:1->0 (128) Ext:15468(23500,30000)
+[2026.10.27 13:01:09]-[T.RECMNG] Rec saved seq:2a4bc
+[Odometer]->FSM Reset
+[2026.10.27 13:01:09]-IGN Ignition changed:0->1 (2) Ext:15519(23500,30000)
+<<[NRF]AT
+[2026.10.27 13:01:09]-[T.RECMNG] Offset:752 attr:7006
+[2026.10.27 13:01:09]-[T.RECMNG] SQ: 173245|Opt-Size:3024 cnt:189
+[2026.10.27 13:01:10]-IGN Ignition changed:1->0 (128) Ext:15759(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:10]-IGN Ignition changed:0->1 (2) Ext:15796(23500,30000)
+[2026.10.27 13:01:10]-IGN Ignition changed:1->0 (128) Ext:15860(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:10]-IGN Ignition changed:0->1 (2) Ext:15860(23500,30000)
+[2026.10.27 13:01:10]-[T.RECMNG] Rec saved seq:2a4bd
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:01:10]-[WD.FUNC]-> counter:2 Cnt:1 Limit:930
+[2026.10.27 13:01:10]-[WD.FUNC]-> counter:3 Cnt:1 Limit:930
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:10]-[T.RECMNG] Offset:756 attr:7006
+[2026.10.27 13:01:10]-[T.RECMNG] SQ: 173246|Opt-Size:3040 cnt:190
+[2026.10.27 13:01:10]-IGN Ignition changed:1->0 (128) Ext:15809(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:11]-IGN Ignition changed:0->1 (2) Ext:15759(23500,30000)
+[2026.10.27 13:01:11]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:01:11]-IGN Ignition changed:1->0 (128) Ext:15847(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:11]-IGN Ignition changed:0->1 (2) Ext:15860(23500,30000)
+[2026.10.27 13:01:11]-[T.RECMNG] Rec saved seq:2a4be
+[2026.10.27 13:01:11]-[T.RECMNG] Offset:760 attr:7006
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:11]-[T.RECMNG] SQ: 173247|Opt-Size:3056 cnt:191
+[2026.10.27 13:01:11]-IGN Ignition changed:1->0 (128) Ext:15834(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:11]-IGN Ignition changed:0->1 (2) Ext:15809(23500,30000)
+[2026.10.27 13:01:12]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:01:12]-IGN Ignition changed:1->0 (128) Ext:15796(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:12]-IGN Ignition changed:0->1 (2) Ext:15796(23500,30000)
+[2026.10.27 13:01:12]-[T.RECMNG] Rec saved seq:2a4bf
+[2026.10.27 13:01:12]-[T.RECMNG] Offset:764 attr:7006
+[2026.10.27 13:01:12]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:01:12]-IGN Ignition changed:1->0 (128) Ext:15796(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:12]-IGN Ignition changed:0->1 (2) Ext:15796(23500,30000)
+[2026.10.27 13:01:12]-[T.RECMNG] SQ: 173248|Opt-Size:3072 cnt:192
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:13]-IGN Ignition changed:1->0 (128) Ext:15847(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:13]-IGN Ignition changed:0->1 (2) Ext:15822(23500,30000)
+[2026.10.27 13:01:13]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:01:13]-IGN Ignition changed:1->0 (128) Ext:15822(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:13]-IGN Ignition changed:0->1 (2) Ext:15822(23500,30000)
+[2026.10.27 13:01:13]-[T.RECMNG] Rec saved seq:2a4c0
+[2026.10.27 13:01:13]-[T.RECMNG] Offset:768 attr:7006
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:01:13]-[T.RECMNG] SQ: 173249|Opt-Size:3088 cnt:193
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:14]-[T.RECMNG] Rec saved seq:2a4c1
+[2026.10.27 13:01:14]-[T.RECMNG] Offset:772 attr:7006
+[2026.10.27 13:01:14]-[T.RECMNG] SQ: 173250|Opt-Size:3104 cnt:194
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:14]-IGN Ignition changed:1->0 (128) Ext:15923(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:14]-IGN Ignition changed:0->1 (2) Ext:15923(23500,30000)
+[2026.10.27 13:01:15]-[T.RECMNG] Rec saved seq:2a4c2
+[2026.10.27 13:01:15]-[T.RECMNG] Offset:776 attr:7006
+[2026.10.27 13:01:15]-[T.RECMNG] SQ: 173251|Opt-Size:3120 cnt:195
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:16]-IGN Ignition changed:1->0 (128) Ext:15998(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:16]-IGN Ignition changed:0->1 (2) Ext:15998(23500,30000)
+[2026.10.27 13:01:16]-[T.RECMNG] Rec saved seq:2a4c3
+[2026.10.27 13:01:16]-[T.RECMNG] Offset:780 attr:7006
+[2026.10.27 13:01:16]-[T.RECMNG] SQ: 173252|Opt-Size:3136 cnt:196
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:16]-IGN Ignition changed:1->0 (128) Ext:15897(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:16]-IGN Ignition changed:0->1 (2) Ext:15961(23500,30000)
+[2026.10.27 13:01:17]-IGN Ignition changed:1->0 (128) Ext:15910(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:17]-IGN Ignition changed:0->1 (2) Ext:15910(23500,30000)
+[2026.10.27 13:01:17]-[T.RECMNG] Rec saved seq:2a4c4
+[2026.10.27 13:01:17]-[T.RECMNG] Offset:784 attr:7006
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:01:17]-[T.RECMNG] SQ: 173253|Opt-Size:3152 cnt:197
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:17]-IGN Ignition changed:1->0 (128) Ext:16061(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:17]-IGN Ignition changed:0->1 (2) Ext:16061(23500,30000)
+[2026.10.27 13:01:17]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:01:18]-IGN Ignition changed:1->0 (128) Ext:16061(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:18]-IGN Ignition changed:0->1 (2) Ext:16074(23500,30000)
+[2026.10.27 13:01:18]-[T.RECMNG] Rec saved seq:2a4c5
+[2026.10.27 13:01:18]-[T.RECMNG] Offset:788 attr:7006
+[NRF]->  Scan ind ratio: 0/0 
+
+[NRF]->  CRC Errors: 0 Format: 0 
+
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:01:18]-[SCH]->  PMinC:5 Ign:1 GPS st:1 Point:2.352200,48.856600 speed:0 date: 2026/10/27 13:1:18 Freq:0
+[2026.10.27 13:01:18]-[IGN.CNT]-> Current 0 value -> 23560296
+
+[2026.10.27 13:01:18]-[FMS.ED]-> FMSED not running - no odometer data
+[2026.10.27 13:01:18]-[F.D.T.F]-> Full can't process 16 job
+[2026.10.27 13:01:18]-IGN Ignition changed:1->0 (128) Ext:16112(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:18]-IGN Ignition changed:0->1 (2) Ext:16112(23500,30000)
+[2026.10.27 13:01:18]-[T.RECMNG] SQ: 173254|Opt-Size:3168 cnt:198
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:19]-IGN Ignition changed:1->0 (128) Ext:16061(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:19]-IGN Ignition changed:0->1 (2) Ext:16061(23500,30000)
+[2026.10.27 13:01:19]-[T.RECMNG] Rec saved seq:2a4c6
+[2026.10.27 13:01:19]-[T.RECMNG] Offset:792 attr:7006
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:01:19]-[T.RECMNG] SQ: 173255|Opt-Size:3184 cnt:199
+[2026.10.27 13:01:19]-[FLASH]-> 2nd server is not ready.
+[2026.10.27 13:01:19]-[AVL.WRITE]->Record Saved:
+
+[2026.10.27 13:01:19]-[AVL] SOURCE: 0 Ts:1793106079664 Diff:59615 ms AvlIO:0 GenType:8
+ HDOP Actual:	0.5
+ Timestamp:	1793106079664 Priority:	0 Longitude:	43388383 Latitude:	363285766 Altitude:	315 Angle:		310 Sat:		32 Speed:		0
+
+
+ Event IO ID:	0
+
+	IO[194]: 1793106079	IO[ 48]: 0	IO[ 67]: 9470	IO[ 68]: 0	IO[181]: 8	IO[182]: 4	IO[ 66]: 16085	IO[ 71]: 3	IO[240]: 0	IO[199]: 0	IO[ 24]: 0	IO[ 21]: 5	IO[ 70]: 331	IO[ 76]: 0	IO[239]: 1	IO[236]: 756	IO[237]: -154	IO[238]: -1575	IO[10010]: 3	IO[449]: 23560298
+
+
+ Record Size:	120 Bytes (26,94,0)
+[2026.10.27 13:01:19]-[FLASH]-> Rec Len:120 p:20249198 attr:0
+[2026.10.27 13:01:19]-IGN Ignition changed:1->0 (128) Ext:16049(23500,30000)
+[OverSpeeding]	->Ign is OFF!	->Speed is 0![Odometer]->FSM Reset
+[2026.10.27 13:01:19]-IGN Ignition changed:0->1 (2) Ext:16049(23500,30000)
+[2026.10.27 13:01:20]-IGN Ignition changed:1->0 (128) Ext:15986(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:20]-IGN Ignition changed:0->1 (2) Ext:15998(23500,30000)
+[2026.10.27 13:01:20]-[T.RECMNG] Rec saved seq:2a4c7
+[2026.10.27 13:01:20]-[T.RECMNG] Offset:796 attr:7006
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:01:20]-[WD.FUNC]-> counter:2 Cnt:1 Limit:930
+[2026.10.27 13:01:20]-[WD.FUNC]-> counter:3 Cnt:1 Limit:930
+[2026.10.27 13:01:20]-[T.RECMNG] SQ: 173256|Opt-Size:3200 cnt:200
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:21]-[T.RECMNG] Rec saved seq:2a4c8
+ ERROR@578: SD Ping Failure
+[2026.10.27 13:01:21]-RS Found:67 on iFlash
+[2026.10.27 13:01:21]-[T.RECMNG] Offset:800 attr:7006
+[2026.10.27 13:01:21]-[T.RECMNG] SQ: 173257|Opt-Size:3216 cnt:201
+[2026.10.27 13:01:21]-IGN Ignition changed:1->0 (128) Ext:15292(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:21]-IGN Ignition changed:0->1 (2) Ext:15292(23500,30000)
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:22]-IGN Ignition changed:1->0 (128) Ext:15203(23500,30000)
+[2026.10.27 13:01:22]-[T.RECMNG] Rec saved seq:2a4c9
+[Odometer]->FSM Reset
+[2026.10.27 13:01:22]-IGN Ignition changed:0->1 (2) Ext:15203(23500,30000)
+[2026.10.27 13:01:22]-[T.RECMNG] Offset:804 attr:7006
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:01:22]-[T.RECMNG] SQ: 173258|Opt-Size:3232 cnt:202
+[2026.10.27 13:01:22]-IGN Ignition changed:1->0 (128) Ext:15228(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:22]-IGN Ignition changed:0->1 (2) Ext:15228(23500,30000)
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:23]-[T.RECMNG] Rec saved seq:2a4ca
+[2026.10.27 13:01:23]-[T.RECMNG] Offset:808 attr:7006
+ ERROR@578: SD Ping Failure
+[2026.10.27 13:01:23]-RS Found:29 on iFlash
+[2026.10.27 13:01:23]-[T.RECMNG] SQ: 173259|Opt-Size:3248 cnt:203
+[2026.10.27 13:01:24]-[T.RECMNG] Rec saved seq:2a4cb
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:24]-[T.RECMNG] Offset:812 attr:7006
+[2026.10.27 13:01:24]-[T.RECMNG] SQ: 173260|Opt-Size:3264 cnt:204
+[2026.10.27 13:01:24]-IGN Ignition changed:1->0 (128) Ext:15569(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:24]-IGN Ignition changed:0->1 (2) Ext:15582(23500,30000)
+[2026.10.27 13:01:25]-[T.RECMNG] Rec saved seq:2a4cc
+[2026.10.27 13:01:25]-[T.RECMNG] Offset:816 attr:7006
+[OverSpeeding]	->Speed is 0!<<[NRF]AT
+[2026.10.27 13:01:25]-[T.RECMNG] SQ: 173261|Opt-Size:3280 cnt:205
+[2026.10.27 13:01:25]-IGN Ignition changed:1->0 (128) Ext:15771(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:25]-IGN Ignition changed:0->1 (2) Ext:15809(23500,30000)
+[2026.10.27 13:01:26]-[T.RECMNG] Rec saved seq:2a4cd
+[2026.10.27 13:01:26]-[T.RECMNG] Offset:820 attr:7006
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:26]-IGN Ignition changed:1->0 (128) Ext:15910(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:26]-IGN Ignition changed:0->1 (2) Ext:15910(23500,30000)
+[2026.10.27 13:01:26]-[T.RECMNG] SQ: 173262|Opt-Size:3296 cnt:206
+[2026.10.27 13:01:26]-IGN Ignition changed:1->0 (128) Ext:15973(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:26]-IGN Ignition changed:0->1 (2) Ext:15860(23500,30000)
+[2026.10.27 13:01:27]-[T.RECMNG] Rec saved seq:2a4ce
+[2026.10.27 13:01:27]-[T.RECMNG] Offset:824 attr:7006
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:27]-[T.RECMNG] SQ: 173263|Opt-Size:3312 cnt:207
+[2026.10.27 13:01:27]-IGN Ignition changed:1->0 (128) Ext:16099(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:27]-IGN Ignition changed:0->1 (2) Ext:16061(23500,30000)
+[2026.10.27 13:01:28]-[T.RECMNG] Rec saved seq:2a4cf
+[2026.10.27 13:01:28]-[T.RECMNG] Offset:828 attr:7006
+[2026.10.27 13:01:28]-[FMS.ED]-> FMSED not running - no odometer data
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:28]-[T.RECMNG] SQ: 173264|Opt-Size:3328 cnt:208
+[2026.10.27 13:01:29]-IGN Ignition changed:1->0 (128) Ext:16162(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:29]-IGN Ignition changed:0->1 (2) Ext:16137(23500,30000)
+[2026.10.27 13:01:29]-[T.RECMNG] Rec saved seq:2a4d0
+[2026.10.27 13:01:29]-[T.RECMNG] Offset:832 attr:7006
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:29]-[T.RECMNG] SQ: 173265|Opt-Size:3344 cnt:209
+[2026.10.27 13:01:29]-IGN Ignition changed:1->0 (128) Ext:16125(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:29]-IGN Ignition changed:0->1 (2) Ext:16162(23500,30000)
+[2026.10.27 13:01:30]-[T.RECMNG] Rec saved seq:2a4d1
+[2026.10.27 13:01:30]-[T.RECMNG] Offset:836 attr:7006
+[2026.10.27 13:01:30]-[WD.FUNC]-> counter:2 Cnt:1 Limit:930
+[2026.10.27 13:01:30]-[WD.FUNC]-> counter:3 Cnt:1 Limit:930
+[2026.10.27 13:01:30]-[T.RECMNG] SQ: 173266|Opt-Size:3360 cnt:210
+[OverSpeeding]	->Speed is 0![2026.10.27 13:01:30]-IGN Ignition changed:1->0 (128) Ext:15506(23500,30000)
+[Odometer]->FSM Reset
+[2026.10.27 13:01:31]-IGN Ignition changed:0->1 (2) Ext:15304(23500,30000)
+[2026.10.27 13:01:31]-[T.RECMNG] Rec saved seq:2a4d2
+[2026.10.27 13:01:31]-[T.RECMNG] Offset:840 attr:7006
+[TACHO]  DDD Available: 1, Timers [3600:3600][1:300]
+[2026.10.27 13:01:31]-[T.RECMNG] SQ: 173267|Opt-Size:3376 cnt:211
+[OverSpeeding]	->Speed is 0!

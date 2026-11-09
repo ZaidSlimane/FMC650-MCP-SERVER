@@ -1,0 +1,342 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ximgen/1.0.0": {
+        "dependencies": {
+          "Configuration.Generator": "1.0.0.0",
+          "DryIoc": "5.4.3.0",
+          "FMB.Core": "1.0.0.0",
+          "FMB.Portation": "1.0.0.0",
+          "FSharp.Core": "6.0.0.0"
+        },
+        "runtime": {
+          "ximgen.dll": {}
+        }
+      },
+      "Configuration.Generator/1.0.0.0": {
+        "runtime": {
+          "Configuration.Generator.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "DryIoc/5.4.3.0": {
+        "runtime": {
+          "DryIoc.dll": {
+            "assemblyVersion": "5.4.3.0",
+            "fileVersion": "5.4.3.0"
+          }
+        }
+      },
+      "FMB.Core/1.0.0.0": {
+        "runtime": {
+          "FMB.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "FMB.Portation/1.0.0.0": {
+        "runtime": {
+          "FMB.Portation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "FSharp.Core/6.0.0.0": {
+        "runtime": {
+          "FSharp.Core.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.522.27404"
+          }
+        },
+        "resources": {
+          "zh-Hant/FSharp.Core.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "zh-Hans/FSharp.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "tr/FSharp.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "ru/FSharp.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "pt-BR/FSharp.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "pl/FSharp.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "ko/FSharp.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "ja/FSharp.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "it/FSharp.Core.resources.dll": {
+            "locale": "it"
+          },
+          "fr/FSharp.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "es/FSharp.Core.resources.dll": {
+            "locale": "es"
+          },
+          "de/FSharp.Core.resources.dll": {
+            "locale": "de"
+          },
+          "cs/FSharp.Core.resources.dll": {
+            "locale": "cs"
+          }
+        }
+      },
+      "NLog/5.0.0.0": {
+        "runtime": {
+          "NLog.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.3.2.2526"
+          }
+        }
+      },
+      "Teltonika.WPF.Base/1.1.0.0": {
+        "runtime": {
+          "Teltonika.WPF.Base.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.1.0"
+          }
+        }
+      },
+      "ResourcesLibrary/1.0.0.0": {
+        "runtime": {
+          "ResourcesLibrary.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "resources": {
+          "tr/ResourcesLibrary.resources.dll": {
+            "locale": "tr"
+          },
+          "ru/ResourcesLibrary.resources.dll": {
+            "locale": "ru"
+          },
+          "es/ResourcesLibrary.resources.dll": {
+            "locale": "es"
+          }
+        }
+      },
+      "WPF.Base/0.0.0.0": {
+        "runtime": {
+          "WPF.Base.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Teltonika.Firmware.Update/1.0.0.0": {
+        "runtime": {
+          "Teltonika.Firmware.Update.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SerialPortWrapper/1.0.0.0": {
+        "runtime": {
+          "SerialPortWrapper.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Teltonika.Firmware/1.0.0.0": {
+        "runtime": {
+          "Teltonika.Firmware.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Teltonika.Firmware.Core/3.0.2.0": {
+        "runtime": {
+          "Teltonika.Firmware.Core.dll": {
+            "assemblyVersion": "3.0.2.0",
+            "fileVersion": "3.0.2.0"
+          }
+        }
+      },
+      "System.Management/8.0.0.0": {
+        "runtime": {
+          "System.Management.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
+      "InTheHand.Net.Personal/3.8.502.0": {
+        "runtime": {
+          "InTheHand.Net.Personal.dll": {
+            "assemblyVersion": "3.8.502.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "MathNet.Numerics/5.0.0.0": {
+        "runtime": {
+          "MathNet.Numerics.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "System.IO.Ports/8.0.0.0": {
+        "runtime": {
+          "System.IO.Ports.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
+      "Teltonika.Firmware.Reader/3.0.2.0": {
+        "runtime": {
+          "Teltonika.Firmware.Reader.dll": {
+            "assemblyVersion": "3.0.2.0",
+            "fileVersion": "3.0.2.0"
+          }
+        }
+      },
+      "ICSharpCode.SharpZipLib/1.4.2.13": {
+        "runtime": {
+          "ICSharpCode.SharpZipLib.dll": {
+            "assemblyVersion": "1.4.2.13",
+            "fileVersion": "1.4.2.13"
+          }
+        }
+      },
+      "System.Windows.Interactivity/4.0.0.0": {
+        "runtime": {
+          "System.Windows.Interactivity.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "2.0.20525.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ximgen/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Configuration.Generator/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DryIoc/5.4.3.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FMB.Core/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FMB.Portation/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FSharp.Core/6.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NLog/5.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Teltonika.WPF.Base/1.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ResourcesLibrary/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WPF.Base/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Teltonika.Firmware.Update/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SerialPortWrapper/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Teltonika.Firmware/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Teltonika.Firmware.Core/3.0.2.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Management/8.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InTheHand.Net.Personal/3.8.502.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MathNet.Numerics/5.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.IO.Ports/8.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Teltonika.Firmware.Reader/3.0.2.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ICSharpCode.SharpZipLib/1.4.2.13": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Windows.Interactivity/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

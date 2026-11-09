@@ -1,0 +1,22 @@
+# Python byte-compiled / cache / virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Uncompressed >100MB knowledge graph files (tracked via .json.gz in git; auto-loaded by repository.py)
+graph-db/graph-v3/graph_v3.json
+graph-db/graph-v1/graph.json
+
+# Runtime generated .cfg artifacts
+fmc650_mcp_server/generated_cfgs/
+
+# OS / Editor artifacts
+.DS_Store
+Thumbs.db

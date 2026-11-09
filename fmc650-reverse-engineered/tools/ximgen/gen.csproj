@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><Nullable>disable</Nullable><AssemblyName>ximgen</AssemblyName>
+    <BundleDir Condition="'$(BundleDir)'==''">/tmp/opencode/fmx65analysis/bundle_extract</BundleDir></PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Configuration.Generator"><HintPath>$(BundleDir)/Configuration.Generator.dll</HintPath></Reference>
+    <Reference Include="FMB.Core"><HintPath>$(BundleDir)/FMB.Core.dll</HintPath></Reference>
+    <Reference Include="FSharp.Core"><HintPath>$(BundleDir)/FSharp.Core.dll</HintPath></Reference>
+    <Reference Include="DryIoc"><HintPath>$(BundleDir)/DryIoc.dll</HintPath></Reference>
+      <Reference Include="FMB.Portation"><HintPath>$(BundleDir)/FMB.Portation.dll</HintPath></Reference>
+  </ItemGroup>
+</Project>

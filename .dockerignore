@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+.git/
+graph-db/graph-v3/graph_v3.json
+graph-db/graph-v1/graph.json
