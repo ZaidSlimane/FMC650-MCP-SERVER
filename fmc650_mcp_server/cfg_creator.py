@@ -15,7 +15,21 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from fmc650_mcp_server.schemas import CompiledCfgArtifact
 
-SERVER_ROOT = Path(os.environ.get("FMC650_SERVER_ROOT") or Path(__file__).resolve().parents[1]).resolve()
+def _resolve_server_root() -> Path:
+    if os.environ.get("FMC650_SERVER_ROOT"):
+        return Path(os.environ["FMC650_SERVER_ROOT"]).resolve()
+    candidates = [
+        Path(__file__).resolve().parents[1],
+        Path.cwd().resolve(),
+        Path("/var/task"),
+    ]
+    for cand in candidates:
+        if (cand / "fmc650-reverse-engineered").exists():
+            return cand
+    return Path(__file__).resolve().parents[1]
+
+
+SERVER_ROOT = _resolve_server_root()
 RE_ROOT = SERVER_ROOT / "fmc650-reverse-engineered"
 RE_TOOLS_DIR = RE_ROOT / "tools"
 RE_CFGS_DIR = (RE_ROOT / "cfgs") if (RE_ROOT / "cfgs").exists() else (RE_ROOT / "re" / "cfgs")

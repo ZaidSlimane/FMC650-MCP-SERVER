@@ -11,7 +11,7 @@ import tempfile
 from typing import Any, Dict, List, Optional
 import uuid
 
-SERVER_ROOT = Path(os.environ.get("FMC650_SERVER_ROOT") or Path(__file__).resolve().parents[1]).resolve()
+from fmc650_mcp_server.cfg_creator import SERVER_ROOT
 if os.environ.get("VERCEL"):
     DEFAULT_DB_PATH = Path(tempfile.gettempdir()) / "fmc650_mcp" / "conversations_test.db"
 else:
