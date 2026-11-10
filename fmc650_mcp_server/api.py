@@ -19,14 +19,16 @@ Exposes:
 """
 from __future__ import annotations
 
+import inspect
 import json
 import os
 from pathlib import Path
 from typing import Any, Dict, List, Literal, Optional
+import uuid
 
-from fastapi import FastAPI, File, HTTPException, Query, UploadFile
+from fastapi import FastAPI, File, HTTPException, Query, Request, Response, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
@@ -35,11 +37,12 @@ from fmc650_mcp_server.cfg_creator import GENERATED_CFGS_DIR
 from fmc650_mcp_server.repository import ALL_KNOWLEDGE_DIRS, FMC650KnowledgeRepository
 
 app = FastAPI(
-    title="Comprehensive FMC650 MCP Server (Browser & API Explorer)",
+    title="Comprehensive FMC650 MCP Server (Streamable HTTP MCP + REST Gateway)",
     version="alfa-0.1",
     description=(
-        "Interactive Browser Explorer & REST Gateway for `fmc650-comprehensive-mcp` — "
-        "15 MCP Tools, 6 MCP Resources, 4 MCP Prompts, 7 Diagnostic Playbooks, "
+        "Streamable HTTP Model Context Protocol (MCP) JSON-RPC 2.0 Server (`POST /mcp` & `POST /`) "
+        "and Interactive REST Gateway for `fmc650-comprehensive-mcp` — "
+        "17 MCP Tools, 6 MCP Resources, 4 MCP Prompts, 7 Diagnostic Playbooks, "
         "11,688 Compiler XML/Schema Parameters, 146 Wialon TR84 Sensors, and .cfg Compiler."
     ),
 )
@@ -50,7 +53,412 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["Mcp-Session-Id", "mcp-session-id"],
 )
+
+
+# ============================================================================
+# 0. STREAMABLE HTTP MCP PROTOCOL (JSON-RPC 2.0 ON /mcp AND /)
+# ============================================================================
+
+MCP_RESOURCES_CATALOG: List[Dict[str, Any]] = [
+    {
+        "uri": "fmc650://schema/summary",
+        "name": "resource_schema_summary",
+        "description": "High-level summary of the FMC650 MCP Server knowledge base, XML schema, graphs, and telematics indices.",
+        "mimeType": "application/json",
+        "fn": mcp_srv.resource_schema_summary,
+    },
+    {
+        "uri": "fmc650://profiles/list",
+        "name": "resource_profiles_list",
+        "description": "List all available reference and production .cfg profiles in the repository.",
+        "mimeType": "application/json",
+        "fn": mcp_srv.resource_profiles_list,
+    },
+    {
+        "uri": "fmc650://corpus/manifest",
+        "name": "resource_corpus_manifest",
+        "description": "Manifest of all indexed documentation and engineering files across the 6 knowledge directories.",
+        "mimeType": "application/json",
+        "fn": mcp_srv.resource_corpus_manifest,
+    },
+    {
+        "uri": "fmc650://diagnostic/index",
+        "name": "resource_diagnostic_index",
+        "description": "Index of all 7 subject-indexed diagnostic playbooks in `diagnostic/`.",
+        "mimeType": "application/json",
+        "fn": mcp_srv.resource_diagnostic_index,
+    },
+    {
+        "uri": "fmc650://telematics/weight-and-trailer-catalog",
+        "name": "resource_weight_and_trailer_catalog",
+        "description": "Complete catalog of Truck FMS (CAN1), WABCO TEBS E TrailerCAN (CAN2), and Flespi weight/fraud keys.",
+        "mimeType": "application/json",
+        "fn": mcp_srv.resource_weight_and_trailer_catalog,
+    },
+    {
+        "uri": "fmc650://telematics/mappings",
+        "name": "resource_telematics_mappings",
+        "description": "Full Flespi & Wialon Path A/B telematics mapping summary and 146 Wialon TR84 unit sensors.",
+        "mimeType": "application/json",
+        "fn": mcp_srv.resource_telematics_mappings,
+    },
+    {
+        "uri": "fmc650://wialon/tr84-sensors",
+        "name": "resource_wialon_tr84_sensors",
+        "description": "All 146 Wialon unit sensors from `wialon-parameters/FMC650_TEST_TR84_UNIT_PROFILE.json`.",
+        "mimeType": "application/json",
+        "fn": mcp_srv.resource_wialon_tr84_sensors,
+    },
+]
+
+
+def _build_fallback_tool_schema(fn: Any) -> Dict[str, Any]:
+    """Generate a JSON Schema inputSchema from function signature if FastMCP is unavailable."""
+    sig = inspect.signature(fn)
+    props: Dict[str, Any] = {}
+    required: List[str] = []
+    for pname, param in sig.parameters.items():
+        ann = str(param.annotation)
+        if "List[int]" in ann or "list[int]" in ann:
+            p_schema: Dict[str, Any] = {"type": "array", "items": {"type": "integer"}}
+        elif "List[" in ann or "list[" in ann:
+            p_schema = {"type": "array", "items": {"type": "string"}}
+        elif "Dict[" in ann or "dict[" in ann:
+            p_schema = {"type": "object"}
+        elif "bool" in ann:
+            p_schema = {"type": "boolean"}
+        elif "int" in ann:
+            p_schema = {"type": "integer"}
+        else:
+            p_schema = {"type": "string"}
+        if param.default is inspect.Parameter.empty:
+            required.append(pname)
+        else:
+            p_schema["default"] = param.default
+        props[pname] = p_schema
+    return {
+        "name": fn.__name__,
+        "description": (fn.__doc__ or "").strip(),
+        "inputSchema": {
+            "type": "object",
+            "properties": props,
+            "required": required,
+        },
+    }
+
+
+async def _mcp_list_tools_payload() -> List[Dict[str, Any]]:
+    if hasattr(mcp_srv.mcp, "list_tools"):
+        tools = await mcp_srv.mcp.list_tools()
+        out: List[Dict[str, Any]] = []
+        for t in tools:
+            d = t.to_mcp_tool().model_dump(by_alias=True, exclude_none=True)
+            d.pop("_meta", None)
+            out.append(d)
+        return out
+    return [
+        _build_fallback_tool_schema(getattr(mcp_srv, name))
+        for name in sorted(dir(mcp_srv))
+        if name.startswith("mcp_") and callable(getattr(mcp_srv, name))
+    ]
+
+
+async def _mcp_handle_single_rpc(msg: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """Process a single JSON-RPC 2.0 message according to the MCP Streamable HTTP specification."""
+    if not isinstance(msg, dict) or msg.get("jsonrpc") != "2.0":
+        return {
+            "jsonrpc": "2.0",
+            "id": msg.get("id") if isinstance(msg, dict) else None,
+            "error": {"code": -32600, "message": "Invalid Request: expected JSON-RPC 2.0 object"},
+        }
+
+    method = msg.get("method", "")
+    has_id = "id" in msg
+    req_id = msg.get("id")
+    params = msg.get("params") or {}
+    if not isinstance(params, dict):
+        params = {}
+
+    # Notifications (no id field) -> return None so HTTP layer responds 202 Accepted
+    if not has_id or method.startswith("notifications/"):
+        return None
+
+    try:
+        if method == "initialize":
+            req_proto = str(params.get("protocolVersion") or "2025-03-26")
+            supported = {"2025-06-18", "2025-03-26", "2024-11-05"}
+            proto = req_proto if req_proto in supported else "2025-03-26"
+            return {
+                "jsonrpc": "2.0",
+                "id": req_id,
+                "result": {
+                    "protocolVersion": proto,
+                    "capabilities": {
+                        "logging": {},
+                        "prompts": {"listChanged": False},
+                        "resources": {"subscribe": False, "listChanged": False},
+                        "tools": {"listChanged": False},
+                    },
+                    "serverInfo": {
+                        "name": "fmc650-comprehensive-mcp",
+                        "version": "alfa-0.1",
+                    },
+                    "instructions": (
+                        "Comprehensive Teltonika FMC650 MCP Server: 17 tools, 6 resources, and 4 prompts "
+                        "for Configurator XML 4.43.1.0, Firmware 03.01.01.Rev.15, SINOTRUK SITRAK J1939 FMS (CAN1), "
+                        "WABCO TEBS E TrailerCAN (CAN2), Flespi telemetry, Wialon TR84 146-sensor profile, and .cfg compilation."
+                    ),
+                },
+            }
+
+        if method in ("ping", "logging/setLevel"):
+            return {"jsonrpc": "2.0", "id": req_id, "result": {}}
+
+        if method == "completion/complete":
+            return {
+                "jsonrpc": "2.0",
+                "id": req_id,
+                "result": {"completion": {"values": [], "total": 0, "hasMore": False}},
+            }
+
+        if method == "tools/list":
+            tools_list = await _mcp_list_tools_payload()
+            return {"jsonrpc": "2.0", "id": req_id, "result": {"tools": tools_list}}
+
+        if method == "tools/call":
+            tool_name = params.get("name")
+            arguments = params.get("arguments") or {}
+            if not tool_name or not hasattr(mcp_srv, tool_name) or not str(tool_name).startswith("mcp_"):
+                return {
+                    "jsonrpc": "2.0",
+                    "id": req_id,
+                    "error": {"code": -32602, "message": f"Unknown MCP tool: {tool_name}"},
+                }
+            try:
+                fn = getattr(mcp_srv, tool_name)
+                result_obj = fn(**arguments)
+                if inspect.isawaitable(result_obj):
+                    result_obj = await result_obj
+                text_str = (
+                    result_obj
+                    if isinstance(result_obj, str)
+                    else json.dumps(result_obj, indent=2, ensure_ascii=False)
+                )
+                call_res: Dict[str, Any] = {
+                    "content": [{"type": "text", "text": text_str}],
+                    "isError": False,
+                }
+                if isinstance(result_obj, dict):
+                    call_res["structuredContent"] = result_obj
+                return {"jsonrpc": "2.0", "id": req_id, "result": call_res}
+            except Exception as tool_exc:
+                return {
+                    "jsonrpc": "2.0",
+                    "id": req_id,
+                    "result": {
+                        "content": [{"type": "text", "text": f"Tool execution error in {tool_name}: {tool_exc}"}],
+                        "isError": True,
+                    },
+                }
+
+        if method == "resources/list":
+            return {
+                "jsonrpc": "2.0",
+                "id": req_id,
+                "result": {
+                    "resources": [
+                        {
+                            "uri": r["uri"],
+                            "name": r["name"],
+                            "description": r["description"],
+                            "mimeType": r["mimeType"],
+                        }
+                        for r in MCP_RESOURCES_CATALOG
+                    ]
+                },
+            }
+
+        if method == "resources/templates/list":
+            return {"jsonrpc": "2.0", "id": req_id, "result": {"resourceTemplates": []}}
+
+        if method == "resources/read":
+            uri = str(params.get("uri") or "")
+            matched_res = next((r for r in MCP_RESOURCES_CATALOG if r["uri"] == uri), None)
+            if not matched_res:
+                return {
+                    "jsonrpc": "2.0",
+                    "id": req_id,
+                    "error": {"code": -32002, "message": f"Resource not found: {uri}"},
+                }
+            text_val = matched_res["fn"]()
+            return {
+                "jsonrpc": "2.0",
+                "id": req_id,
+                "result": {
+                    "contents": [
+                        {
+                            "uri": uri,
+                            "mimeType": matched_res["mimeType"],
+                            "text": text_val,
+                        }
+                    ]
+                },
+            }
+
+        if method == "prompts/list":
+            prompts_out: List[Dict[str, Any]] = []
+            for pname in sorted(dir(mcp_srv)):
+                if pname.startswith("prompt_") and callable(getattr(mcp_srv, pname)):
+                    pfn = getattr(mcp_srv, pname)
+                    sig = inspect.signature(pfn)
+                    pargs = [
+                        {
+                            "name": k,
+                            "description": f"Parameter `{k}` (default: {v.default!r})",
+                            "required": v.default is inspect.Parameter.empty,
+                        }
+                        for k, v in sig.parameters.items()
+                    ]
+                    prompts_out.append({
+                        "name": pname,
+                        "description": (pfn.__doc__ or "").strip(),
+                        "arguments": pargs,
+                    })
+            return {"jsonrpc": "2.0", "id": req_id, "result": {"prompts": prompts_out}}
+
+        if method == "prompts/get":
+            pname = str(params.get("name") or "")
+            pargs = params.get("arguments") or {}
+            if not pname.startswith("prompt_") or not hasattr(mcp_srv, pname):
+                return {
+                    "jsonrpc": "2.0",
+                    "id": req_id,
+                    "error": {"code": -32602, "message": f"Unknown prompt: {pname}"},
+                }
+            pfn = getattr(mcp_srv, pname)
+            prompt_text = pfn(**pargs)
+            return {
+                "jsonrpc": "2.0",
+                "id": req_id,
+                "result": {
+                    "description": (pfn.__doc__ or "").strip(),
+                    "messages": [
+                        {
+                            "role": "user",
+                            "content": {"type": "text", "text": prompt_text},
+                        }
+                    ],
+                },
+            }
+
+        return {
+            "jsonrpc": "2.0",
+            "id": req_id,
+            "error": {"code": -32601, "message": f"Method not found: {method}"},
+        }
+    except Exception as exc:
+        return {
+            "jsonrpc": "2.0",
+            "id": req_id,
+            "error": {"code": -32603, "message": f"Internal JSON-RPC error: {exc}"},
+        }
+
+
+@app.post("/mcp", tags=["0. Streamable HTTP MCP (JSON-RPC 2.0)"])
+@app.post("/mcp/", include_in_schema=False)
+@app.post("/", include_in_schema=False)
+async def mcp_streamable_http_post(request: Request) -> Response:
+    """Stateless Streamable HTTP MCP JSON-RPC 2.0 endpoint (`POST /mcp` and `POST /`) for Claude Code, Cursor, and MCP clients."""
+    session_id = (
+        request.headers.get("mcp-session-id")
+        or request.headers.get("Mcp-Session-Id")
+        or f"fmc650-{uuid.uuid4().hex[:16]}"
+    )
+    resp_headers = {"Mcp-Session-Id": session_id}
+
+    try:
+        payload = await request.json()
+    except Exception:
+        return JSONResponse(
+            status_code=400,
+            content={"jsonrpc": "2.0", "id": None, "error": {"code": -32700, "message": "Parse error: invalid JSON"}},
+            headers=resp_headers,
+        )
+
+    if isinstance(payload, list):
+        if not payload:
+            return JSONResponse(
+                status_code=400,
+                content={"jsonrpc": "2.0", "id": None, "error": {"code": -32600, "message": "Invalid empty batch"}},
+                headers=resp_headers,
+            )
+        responses = []
+        for item in payload:
+            r = await _mcp_handle_single_rpc(item)
+            if r is not None:
+                responses.append(r)
+        if not responses:
+            return Response(status_code=202, headers=resp_headers)
+        return JSONResponse(content=responses, headers=resp_headers)
+
+    result = await _mcp_handle_single_rpc(payload)
+    if result is None:
+        return Response(status_code=202, headers=resp_headers)
+    return JSONResponse(content=result, headers=resp_headers)
+
+
+@app.get("/mcp", tags=["0. Streamable HTTP MCP (JSON-RPC 2.0)"])
+@app.get("/mcp/", include_in_schema=False)
+async def mcp_streamable_http_get(request: Request) -> Response:
+    """Streamable HTTP MCP GET handler: returns 405 for SSE stream probes per MCP 2025-03-26 stateless spec, or JSON discovery for browser/curl."""
+    accept = (request.headers.get("accept") or "").lower()
+    if "text/event-stream" in accept and "text/html" not in accept and "application/json" not in accept:
+        return Response(
+            status_code=405,
+            content="Method Not Allowed: stateless Streamable HTTP MCP server uses POST /mcp",
+            headers={"Allow": "POST, DELETE"},
+        )
+    tools_list = await _mcp_list_tools_payload()
+    return JSONResponse(
+        content={
+            "protocol": "mcp-streamable-http",
+            "jsonrpc": "2.0",
+            "protocolVersions": ["2025-06-18", "2025-03-26", "2024-11-05"],
+            "serverInfo": {"name": "fmc650-comprehensive-mcp", "version": "alfa-0.1"},
+            "endpoints": {
+                "mcp_streamable_http": "/mcp",
+                "mcp_root_post": "/",
+                "tools_catalog": "/mcp/tools",
+                "openapi_spec": "/openapi.json",
+                "swagger_docs": "/docs",
+            },
+            "claude_code_setup": "claude mcp add --transport http fmc650 https://fmc650-mcp-server.vercel.app/mcp",
+            "supported_jsonrpc_methods": [
+                "initialize",
+                "notifications/initialized",
+                "ping",
+                "tools/list",
+                "tools/call",
+                "resources/list",
+                "resources/templates/list",
+                "resources/read",
+                "prompts/list",
+                "prompts/get",
+            ],
+            "tools_count": len(tools_list),
+            "resources_count": len(MCP_RESOURCES_CATALOG),
+            "prompts_count": 4,
+        }
+    )
+
+
+@app.delete("/mcp", include_in_schema=False)
+@app.delete("/mcp/", include_in_schema=False)
+async def mcp_streamable_http_delete() -> Response:
+    """Acknowledge MCP session termination cleanly."""
+    return Response(status_code=200, content="")
 
 
 # ============================================================================
@@ -65,6 +473,8 @@ def health_check() -> Dict[str, Any]:
         "status": "ok",
         "mcp_server": "fmc650-comprehensive-mcp",
         "version": "alfa-0.1",
+        "mcp_streamable_http_endpoint": "/mcp",
+        "mcp_protocol_versions": ["2025-06-18", "2025-03-26", "2024-11-05"],
         "knowledge_directories": ALL_KNOWLEDGE_DIRS,
         "indexed_doc_files": len(repo.doc_files),
         "diagnostic_playbooks_count": 7,
@@ -617,6 +1027,7 @@ EXPLORER_HTML = """<!DOCTYPE html>
       <p>SINOTRUK SITRAK J1939 FMS (CAN1) + WABCO TEBS E TrailerCAN (CAN2) + Flespi Weight Analytics + Wialon TR84 (146 Sensors)</p>
     </div>
     <div class="badge-row">
+      <a class="badge green" href="/mcp" target="_blank">Streamable HTTP MCP (/mcp)</a>
       <a class="badge green" href="/docs" target="_blank">Swagger UI (/docs)</a>
       <a class="badge" href="/redoc" target="_blank">ReDoc (/redoc)</a>
       <a class="badge" href="/workbench" target="_blank">React Workbench (/workbench)</a>
@@ -626,6 +1037,13 @@ EXPLORER_HTML = """<!DOCTYPE html>
 
   <main>
     <div>
+      <div class="panel">
+        <h2>0. Streamable HTTP MCP Protocol (JSON-RPC 2.0)</h2>
+        <div class="link-list">
+          <button class="btn-link" onclick="loadUrl('/mcp')"><span>Streamable HTTP MCP Discovery (POST /mcp &amp; POST /)</span><code>POST /mcp</code></button>
+        </div>
+      </div>
+
       <div class="panel">
         <h2>1. Subject-Indexed Diagnostic Playbooks (diagnostic/)</h2>
         <div class="link-list">

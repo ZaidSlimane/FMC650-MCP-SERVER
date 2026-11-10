@@ -162,3 +162,113 @@ def test_cfg_tools_and_prompts():
     assert "PID 1000" in prompt_audit_cfg_profile()
     assert "13657" in prompt_map_flespi_wialon_sensor()
     assert "Brake-Bind" in prompt_explain_incline_and_calibration()
+
+
+def test_streamable_http_mcp_jsonrpc():
+    from fastapi.testclient import TestClient
+    from fmc650_mcp_server.api import app
+
+    client = TestClient(app)
+
+    # 1. initialize on /mcp
+    init_res = client.post(
+        "/mcp",
+        json={
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "initialize",
+            "params": {
+                "protocolVersion": "2025-03-26",
+                "capabilities": {},
+                "clientInfo": {"name": "claude-code", "version": "1.0.0"},
+            },
+        },
+    )
+    assert init_res.status_code == 200
+    assert "mcp-session-id" in {k.lower() for k in init_res.headers.keys()}
+    init_data = init_res.json()
+    assert init_data["result"]["protocolVersion"] == "2025-03-26"
+    assert init_data["result"]["serverInfo"]["name"] == "fmc650-comprehensive-mcp"
+
+    # 2. notifications/initialized -> 202 Accepted
+    notif_res = client.post(
+        "/mcp",
+        json={"jsonrpc": "2.0", "method": "notifications/initialized"},
+    )
+    assert notif_res.status_code == 202
+
+    # 3. tools/list
+    tools_res = client.post(
+        "/mcp",
+        json={"jsonrpc": "2.0", "id": 2, "method": "tools/list", "params": {}},
+    )
+    assert tools_res.status_code == 200
+    tools_list = tools_res.json()["result"]["tools"]
+    assert len(tools_list) >= 15
+    assert any(t["name"] == "mcp_resolve_identifiers" and "inputSchema" in t for t in tools_list)
+
+    # 4. tools/call on both /mcp and /
+    call_res = client.post(
+        "/",
+        json={
+            "jsonrpc": "2.0",
+            "id": 3,
+            "method": "tools/call",
+            "params": {
+                "name": "mcp_resolve_identifiers",
+                "arguments": {"identifiers": ["100", "avl_id:13657"]},
+            },
+        },
+    )
+    assert call_res.status_code == 200
+    call_body = call_res.json()["result"]
+    assert call_body["isError"] is False
+    assert "13657" in call_body["content"][0]["text"]
+
+    # 5. resources/list & resources/read
+    res_list = client.post(
+        "/mcp",
+        json={"jsonrpc": "2.0", "id": 4, "method": "resources/list", "params": {}},
+    )
+    assert res_list.status_code == 200
+    assert len(res_list.json()["result"]["resources"]) >= 6
+
+    res_read = client.post(
+        "/mcp",
+        json={
+            "jsonrpc": "2.0",
+            "id": 5,
+            "method": "resources/read",
+            "params": {"uri": "fmc650://schema/summary"},
+        },
+    )
+    assert res_read.status_code == 200
+    assert res_read.json()["result"]["contents"][0]["uri"] == "fmc650://schema/summary"
+
+    # 6. prompts/list & prompts/get
+    pr_list = client.post(
+        "/mcp",
+        json={"jsonrpc": "2.0", "id": 6, "method": "prompts/list", "params": {}},
+    )
+    assert pr_list.status_code == 200
+    assert len(pr_list.json()["result"]["prompts"]) == 4
+
+    pr_get = client.post(
+        "/mcp",
+        json={
+            "jsonrpc": "2.0",
+            "id": 7,
+            "method": "prompts/get",
+            "params": {
+                "name": "prompt_diagnose_fms_or_trailer_weight",
+                "arguments": {"tractor_model": "SITRAK C7H"},
+            },
+        },
+    )
+    assert pr_get.status_code == 200
+    assert "SITRAK C7H" in pr_get.json()["result"]["messages"][0]["content"]["text"]
+
+    # 7. GET /mcp SSE probe returns 405 Method Not Allowed per MCP Streamable HTTP stateless spec
+    sse_probe = client.get("/mcp", headers={"Accept": "text/event-stream"})
+    assert sse_probe.status_code == 405
+
