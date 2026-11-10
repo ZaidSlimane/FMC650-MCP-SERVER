@@ -10,6 +10,7 @@ import hashlib
 import os
 from pathlib import Path
 import sys
+import tempfile
 from typing import Any, Dict, List, Optional, Tuple
 
 from fmc650_mcp_server.schemas import CompiledCfgArtifact
@@ -19,9 +20,12 @@ RE_ROOT = SERVER_ROOT / "fmc650-reverse-engineered"
 RE_TOOLS_DIR = RE_ROOT / "tools"
 RE_CFGS_DIR = (RE_ROOT / "cfgs") if (RE_ROOT / "cfgs").exists() else (RE_ROOT / "re" / "cfgs")
 RE_DIR = RE_ROOT / "re"
-GENERATED_CFGS_DIR = Path(
-    os.environ.get("FMC650_GENERATED_CFGS_DIR") or (Path(__file__).resolve().parent / "generated_cfgs")
-).resolve()
+if os.environ.get("FMC650_GENERATED_CFGS_DIR"):
+    GENERATED_CFGS_DIR = Path(os.environ["FMC650_GENERATED_CFGS_DIR"]).resolve()
+elif os.environ.get("VERCEL"):
+    GENERATED_CFGS_DIR = (Path(tempfile.gettempdir()) / "fmc650_generated_cfgs").resolve()
+else:
+    GENERATED_CFGS_DIR = (Path(__file__).resolve().parent / "generated_cfgs").resolve()
 
 
 def _rel_path(path: Path) -> str:

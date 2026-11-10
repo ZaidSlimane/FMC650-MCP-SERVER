@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "main.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{tests/**,**/*.dll,**/*.pdb,**/*.exe,teltonika-docs/**/*.png,teltonika-docs/**/*.gif,teltonika-docs/**/*.jpg}"
+    }
+  }
+}

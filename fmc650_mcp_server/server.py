@@ -437,6 +437,7 @@ def mcp_inspect_wialon_profile(
         cat_keywords = {
             "weight": ["weight", "poids", "charge", "axle", "essieu", "fleet_", "vhc_"],
             "trailer": ["trailer", "remorque", "ebs", "rop", "pneumatic"],
+            "fleet": ["fleet_", "vhc_"],
             "tidj": ["fleet_", "vhc_"],
             "fuel": ["fuel", "carburant", "adblue"],
             "engine": ["eng", "moteur", "rpm", "coolant", "oil"],

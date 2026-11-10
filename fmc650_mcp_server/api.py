@@ -614,7 +614,7 @@ EXPLORER_HTML = """<!DOCTYPE html>
   <header>
     <div>
       <h1>Teltonika FMC650 Comprehensive MCP Server (alfa-0.1)</h1>
-      <p>SINOTRUK SITRAK J1939 FMS (CAN1) + WABCO TEBS E TrailerCAN (CAN2) + Flespi tidj Plugin + Wialon TR84 (146 Sensors)</p>
+      <p>SINOTRUK SITRAK J1939 FMS (CAN1) + WABCO TEBS E TrailerCAN (CAN2) + Flespi Weight Analytics + Wialon TR84 (146 Sensors)</p>
     </div>
     <div class="badge-row">
       <a class="badge green" href="/docs" target="_blank">Swagger UI (/docs)</a>
@@ -652,12 +652,12 @@ EXPLORER_HTML = """<!DOCTYPE html>
             <span>Resolve PIDs, AVL IDs, Flespi & Wialon Sensor 71</span><code>/mcp/resolve</code>
           </button>
           <button class="btn-link" onclick="loadUrl('/mcp/telematics?keys=46530,139,103060,13657,13810,fleet_weight_stable,fleet_fraud_alert')">
-            <span>Lookup Telematics Mappings (FMS + Trailer + tidj)</span><code>/mcp/telematics</code>
+            <span>Lookup Telematics Mappings (FMS + Trailer + Fleet)</span><code>/mcp/telematics</code>
           </button>
           <button class="btn-link" onclick="loadUrl('/mcp/wialon-sensors?category=trailer')">
             <span>Inspect Wialon TR84 Trailer Sensors</span><code>/mcp/wialon-sensors</code>
           </button>
-          <button class="btn-link" onclick="loadUrl('/mcp/wialon-sensors?category=tidj')">
+          <button class="btn-link" onclick="loadUrl('/mcp/wialon-sensors?category=fleet')">
             <span>Inspect Wialon TR84 fleet_* Weight/Fraud Sensors</span><code>/mcp/wialon-sensors</code>
           </button>
           <button class="btn-link" onclick="loadUrl('/mcp/commands?action=enable_normal_can1')">

@@ -5,10 +5,13 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "fmc650-comprehensive-mcp"
 version = "0.1a1"
-description = "Comprehensive Model Context Protocol (MCP) Server for Teltonika FMC650, SINOTRUK SITRAK J1939 FMS, WABCO TEBS E TrailerCAN, Flespi tidj Weight Analytics, Wialon TR84 Sensors, and .cfg Compilation"
+description = "Comprehensive Model Context Protocol (MCP) Server for Teltonika FMC650, SINOTRUK SITRAK J1939 FMS, WABCO TEBS E TrailerCAN, Flespi Weight Analytics, Wialon TR84 Sensors, and .cfg Compilation"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn>=0.30.0",
+    "python-multipart>=0.0.9",
     "fastmcp>=0.4.0",
     "mcp>=1.0.0",
     "pydantic>=2.5.0",
@@ -17,3 +20,6 @@ dependencies = [
 
 [project.scripts]
 fmc650-mcp = "fmc650_mcp_server.server:main"
+
+[tool.vercel]
+entrypoint = "main:app"

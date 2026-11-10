@@ -7,11 +7,15 @@ import json
 import os
 from pathlib import Path
 import sqlite3
+import tempfile
 from typing import Any, Dict, List, Optional
 import uuid
 
 SERVER_ROOT = Path(os.environ.get("FMC650_SERVER_ROOT") or Path(__file__).resolve().parents[1]).resolve()
-DEFAULT_DB_PATH = SERVER_ROOT / "graph-db" / "data" / "conversations_test.db"
+if os.environ.get("VERCEL"):
+    DEFAULT_DB_PATH = Path(tempfile.gettempdir()) / "fmc650_mcp" / "conversations_test.db"
+else:
+    DEFAULT_DB_PATH = SERVER_ROOT / "graph-db" / "data" / "conversations_test.db"
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS conversations (
