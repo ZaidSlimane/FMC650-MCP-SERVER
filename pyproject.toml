@@ -21,5 +21,8 @@ dependencies = [
 [project.scripts]
 fmc650-mcp = "fmc650_mcp_server.server:main"
 
+[tool.setuptools.packages.find]
+include = ["fmc650_mcp_server*"]
+
 [tool.vercel]
 entrypoint = "main:app"
